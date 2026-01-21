@@ -19,9 +19,6 @@ export default function Home() {
             Squishy <br/>
             <span className="text-primary relative inline-block">
               Design
-              <div className="absolute -right-8 -top-8 animate-pulse">
-                <Star className="w-8 h-8 fill-primary text-primary" />
-              </div>
             </span>
           </h1>
           
