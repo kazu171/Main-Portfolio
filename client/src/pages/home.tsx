@@ -1,7 +1,6 @@
 import { Layout } from "@/components/layout";
 import { MochiCard } from "@/components/ui/mochi-card";
 import { MochiButton } from "@/components/ui/mochi-button";
-import generatedImage from "@assets/generated_images/soft_abstract_3d_shapes_in_warm_sand_and_soft_coral_colors.png";
 import chibiCharacter from "@assets/generated_images/cute_3d_chibi_character_sitting_on_a_mochi_cloud.png";
 import { ArrowRight, Heart, Sparkles, Smile, Star } from "lucide-react";
 
@@ -46,20 +45,13 @@ export default function Home() {
            <div className="absolute inset-0 bg-primary/20 blur-[120px] rounded-full scale-150" />
            
            <div className="relative z-10 w-full h-full p-8 floating flex items-center justify-center">
-             <div className="relative w-full h-full">
+             {/* Chibi Character Overlay */}
+             <div className="w-3/4 h-3/4 animate-[floating_10s_infinite_ease-in-out_2s]">
                <img 
-                 src={generatedImage} 
-                 alt="Abstract Mochi Glass Shapes" 
-                 className="w-full h-full object-contain drop-shadow-[0_32px_64px_rgba(89,80,70,0.2)]"
+                 src={chibiCharacter} 
+                 alt="Cute Chibi Character" 
+                 className="w-full h-full object-contain drop-shadow-xl"
                />
-               {/* Chibi Character Overlay */}
-               <div className="absolute bottom-4 right-4 w-1/2 h-1/2 animate-[floating_10s_infinite_ease-in-out_2s]">
-                 <img 
-                   src={chibiCharacter} 
-                   alt="Cute Chibi Character" 
-                   className="w-full h-full object-contain drop-shadow-xl"
-                 />
-               </div>
              </div>
            </div>
            
