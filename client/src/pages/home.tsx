@@ -1,38 +1,108 @@
+import { useState } from "react";
 import { Layout } from "@/components/layout";
 import { MochiCard } from "@/components/ui/mochi-card";
 import { MochiButton } from "@/components/ui/mochi-button";
 import chibiCharacter from "@assets/generated_images/cute_3d_chibi_character_sitting_on_a_mochi_cloud.png";
-import { ArrowRight, Heart, Sparkles, Smile, Star } from "lucide-react";
+import { ArrowRight, Heart, Sparkles, Smile, Star, Languages } from "lucide-react";
+
+type Content = {
+  badge: string;
+  title1: string;
+  title2: string;
+  heroDesc: string;
+  btnStart: string;
+  btnSpecs: string;
+  phiTitle: string;
+  phiDesc: string;
+  cards: { title: string; desc: string }[];
+  showcaseTitle: string;
+  showcaseDesc: string;
+  showcaseBtn: string;
+};
+
+const translations: Record<"en" | "ja", Content> = {
+  en: {
+    badge: "Soft Tech Era",
+    title1: "Squishy",
+    title2: "Design",
+    heroDesc: "Interfaces that feel like a warm hug. Tactile, bouncy, and delightfully human.",
+    btnStart: "Get Started",
+    btnSpecs: "View Specs",
+    phiTitle: "Built to be Touched",
+    phiDesc: "We've combined deep claymorphism with soft glass for a unique 3D feel.",
+    cards: [
+      { title: "Friendly UI", desc: "No sharp edges, just soft curves and warm colors." },
+      { title: "Inner Glow", desc: "Subsurface scattering effects for a realistic mochi look." },
+      { title: "Bounce Logic", desc: "Every interaction is springy and responsive." }
+    ],
+    showcaseTitle: "Low Rebound Interaction",
+    showcaseDesc: "Experience buttons that feel like pressing into a soft pillow. Our Mochi-Bounce physics provides satisfying tactile feedback.",
+    showcaseBtn: "Press Me"
+  },
+  ja: {
+    badge: "ソフトテックの時代",
+    title1: "ぷにぷに",
+    title2: "デザイン",
+    heroDesc: "あたたかい抱擁のようなインターフェース。触覚的で弾力があり、驚くほど人間味にあふれています。",
+    btnStart: "はじめる",
+    btnSpecs: "仕様を見る",
+    phiTitle: "触れるために生まれた",
+    phiDesc: "深いクレイモーフィズムと柔らかなガラスを組み合わせ、独自の3D感を実現しました。",
+    cards: [
+      { title: "やさしいUI", desc: "鋭い角をなくし、柔らかな曲線と温かみのある色使いを採用。" },
+      { title: "内側からの輝き", desc: "本物の餅のような質感を再現する、内部散乱エフェクト。" },
+      { title: "はずむロジック", desc: "すべてのインタラクションに弾力と反応の良さを。" }
+    ],
+    showcaseTitle: "低反発な心地よさ",
+    showcaseDesc: "柔らかいクッションを押し込むようなボタンを体験してください。「モチ・バウンス」物理学が心地よいフィードバックを提供します。",
+    showcaseBtn: "押してみて"
+  }
+};
 
 export default function Home() {
+  const [lang, setLang] = useState<"en" | "ja">("ja");
+  const t = translations[lang];
+
   return (
     <Layout className="mochi-texture">
+      {/* Language Toggle */}
+      <div className="fixed top-8 right-8 z-50">
+        <MochiButton 
+          variant="secondary" 
+          size="sm" 
+          className="gap-2 rounded-full border-white/60 shadow-xl"
+          onClick={() => setLang(lang === "en" ? "ja" : "en")}
+        >
+          <Languages className="w-4 h-4 text-primary" />
+          {lang === "en" ? "日本語" : "English"}
+        </MochiButton>
+      </div>
+
       {/* Hero Section */}
       <section className="relative pt-12 pb-24 md:pt-24 md:pb-40 flex flex-col md:flex-row items-center gap-16">
         <div className="flex-1 space-y-10 z-10 text-center md:text-left">
           <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/60 backdrop-blur-xl border border-white/80 text-[10px] font-black text-primary uppercase tracking-[0.2em] shadow-lg floating">
             <Sparkles className="w-3.5 h-3.5 fill-primary/20" />
-            Soft Tech Era
+            {t.badge}
           </div>
           
           <h1 className="text-6xl md:text-8xl font-[900] text-foreground tracking-tighter leading-[0.9] text-shadow-sm">
-            Squishy <br/>
+            {t.title1} <br/>
             <span className="text-primary relative inline-block">
-              Design
+              {t.title2}
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-lg font-medium">
-            Interfaces that feel like a warm hug. 
-            Tactile, bouncy, and delightfully human.
+            {t.heroDesc}
           </p>
           
           <div className="flex flex-wrap gap-6 pt-6 justify-center md:justify-start">
             <MochiButton size="lg" className="group">
-              Get Started <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              {t.btnStart} <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </MochiButton>
             <MochiButton variant="secondary" size="lg">
-              View Specs
+              {t.btnSpecs}
             </MochiButton>
           </div>
         </div>
@@ -76,21 +146,17 @@ export default function Home() {
       {/* Philosophy Section */}
       <section className="py-32">
         <div className="text-center mb-20 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight">Built to be Touched</h2>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight">{t.phiTitle}</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-medium">
-            We've combined deep claymorphism with soft glass for a unique 3D feel.
+            {t.phiDesc}
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {[
-            { icon: <Smile className="w-8 h-8" />, title: "Friendly UI", desc: "No sharp edges, just soft curves and warm colors." },
-            { icon: <Sparkles className="w-8 h-8" />, title: "Inner Glow", desc: "Subsurface scattering effects for a realistic mochi look." },
-            { icon: <Star className="w-8 h-8" />, title: "Bounce Logic", desc: "Every interaction is springy and responsive." }
-          ].map((item, i) => (
+          {t.cards.map((item, i) => (
             <MochiCard key={i} className="group hover:-translate-y-4 transition-all duration-500 text-center py-12 px-10">
               <div className="w-20 h-20 rounded-[2.5rem] bg-secondary flex items-center justify-center text-primary mb-8 mx-auto shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform">
-                {item.icon}
+                {[<Smile className="w-8 h-8" />, <Sparkles className="w-8 h-8" />, <Star className="w-8 h-8" />][i]}
               </div>
               <h3 className="text-2xl font-black mb-4">{item.title}</h3>
               <p className="text-muted-foreground leading-relaxed font-medium">{item.desc}</p>
@@ -103,13 +169,12 @@ export default function Home() {
       <section className="py-24 bg-white/30 backdrop-blur-xl rounded-[4rem] border border-white/60 shadow-inner px-12 overflow-hidden">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-16">
           <div className="flex-1 space-y-6">
-            <h2 className="text-4xl font-black">Low Rebound <br/>Interaction</h2>
+            <h2 className="text-4xl font-black leading-tight">{t.showcaseTitle}</h2>
             <p className="text-muted-foreground text-lg font-medium leading-relaxed">
-              Experience buttons that feel like pressing into a soft pillow. 
-              Our "Mochi-Bounce" physics provides satisfying tactile feedback.
+              {t.showcaseDesc}
             </p>
             <div className="flex gap-4">
-               <MochiButton variant="secondary" className="px-12">Press Me</MochiButton>
+               <MochiButton variant="secondary" className="px-12">{t.showcaseBtn}</MochiButton>
                <MochiButton size="icon" className="rounded-full"><Smile /></MochiButton>
             </div>
           </div>
