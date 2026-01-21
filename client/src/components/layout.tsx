@@ -4,9 +4,28 @@ import { cn } from "@/lib/utils";
 interface LayoutProps {
   children: React.ReactNode;
   className?: string;
+  lang?: "en" | "ja";
 }
 
-export function Layout({ children, className }: LayoutProps) {
+export function Layout({ children, className, lang = "ja" }: LayoutProps) {
+  const navItems = {
+    en: [
+      { label: "Philosophy", href: "#" },
+      { label: "Components", href: "#" },
+      { label: "About", href: "#" },
+    ],
+    ja: [
+      { label: "哲学", href: "#" },
+      { label: "コンポーネント", href: "#" },
+      { label: "概要", href: "#" },
+    ],
+  };
+
+  const footerText = {
+    en: "© 2026 Mochi Glass Design System. Warmth in Technology.",
+    ja: "© 2026 モチ・グラス デザインシステム。テクノロジーに温もりを。",
+  };
+
   return (
     <div className="min-h-screen w-full flex flex-col items-center">
       {/* Navbar Placeholder */}
@@ -16,9 +35,11 @@ export function Layout({ children, className }: LayoutProps) {
           Mochi Glass
         </div>
         <div className="flex gap-8 text-sm font-semibold text-muted-foreground">
-          <a href="#" className="hover:text-primary transition-colors">Philosophy</a>
-          <a href="#" className="hover:text-primary transition-colors">Components</a>
-          <a href="#" className="hover:text-primary transition-colors">About</a>
+          {navItems[lang].map((item) => (
+            <a key={item.label} href={item.href} className="hover:text-primary transition-colors">
+              {item.label}
+            </a>
+          ))}
         </div>
       </nav>
 
@@ -27,7 +48,7 @@ export function Layout({ children, className }: LayoutProps) {
       </main>
 
       <footer className="w-full py-8 text-center text-sm text-muted-foreground/60">
-        <p>© 2026 Mochi Glass Design System. Warmth in Technology.</p>
+        <p>{footerText[lang]}</p>
       </footer>
     </div>
   );

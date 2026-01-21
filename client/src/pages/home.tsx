@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLocation } from "wouter";
 import { Layout } from "@/components/layout";
 import { MochiCard } from "@/components/ui/mochi-card";
 import { MochiButton } from "@/components/ui/mochi-button";
@@ -59,19 +59,23 @@ const translations: Record<"en" | "ja", Content> = {
   }
 };
 
-export default function Home() {
-  const [lang, setLang] = useState<"en" | "ja">("ja");
+interface HomeProps {
+  lang: "en" | "ja";
+}
+
+export default function Home({ lang }: HomeProps) {
+  const [, setLocation] = useLocation();
   const t = translations[lang];
 
   return (
-    <Layout className="mochi-texture">
+    <Layout className="mochi-texture" lang={lang}>
       {/* Language Toggle */}
       <div className="fixed top-8 right-8 z-50">
         <MochiButton 
           variant="secondary" 
           size="sm" 
           className="gap-2 rounded-full border-white/60 shadow-xl"
-          onClick={() => setLang(lang === "en" ? "ja" : "en")}
+          onClick={() => setLocation(lang === "en" ? "/ja" : "/en")}
         >
           <Languages className="w-4 h-4 text-primary" />
           {lang === "en" ? "日本語" : "English"}
