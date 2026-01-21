@@ -2,191 +2,125 @@ import { Layout } from "@/components/layout";
 import { MochiCard } from "@/components/ui/mochi-card";
 import { MochiButton } from "@/components/ui/mochi-button";
 import generatedImage from "@assets/generated_images/soft_abstract_3d_shapes_in_warm_sand_and_soft_coral_colors.png";
-import { ArrowRight, Heart, Layers, Sparkles, Smile } from "lucide-react";
+import { ArrowRight, Heart, Sparkles, Smile, Star } from "lucide-react";
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout className="mochi-texture">
       {/* Hero Section */}
-      <section className="relative pt-12 pb-24 md:pt-20 md:pb-32 flex flex-col md:flex-row items-center gap-12">
-        <div className="flex-1 space-y-8 z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/40 backdrop-blur-md border border-white/60 text-xs font-bold text-primary uppercase tracking-wider shadow-sm">
-            <Sparkles className="w-3 h-3" />
-            Warmth in Technology
+      <section className="relative pt-12 pb-24 md:pt-24 md:pb-40 flex flex-col md:flex-row items-center gap-16">
+        <div className="flex-1 space-y-10 z-10 text-center md:text-left">
+          <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/60 backdrop-blur-xl border border-white/80 text-[10px] font-black text-primary uppercase tracking-[0.2em] shadow-lg floating">
+            <Sparkles className="w-3.5 h-3.5 fill-primary/20" />
+            Soft Tech Era
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold text-foreground tracking-tight leading-[1.1]">
-            Soft <br/>
-            <span className="text-primary relative">
-              Technology
-              <svg className="absolute w-full h-3 -bottom-1 left-0 text-primary/20" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
-              </svg>
+          <h1 className="text-6xl md:text-8xl font-[900] text-foreground tracking-tighter leading-[0.9] text-shadow-sm">
+            Squishy <br/>
+            <span className="text-primary relative inline-block">
+              Design
+              <div className="absolute -right-8 -top-8 animate-pulse">
+                <Star className="w-8 h-8 fill-primary text-primary" />
+              </div>
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg">
-            A design language blending the clarity of glass with the warmth of clay. 
-            Tactile, friendly, and human-centered.
+          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-lg font-medium">
+            Interfaces that feel like a warm hug. 
+            Tactile, bouncy, and delightfully human.
           </p>
           
-          <div className="flex flex-wrap gap-4 pt-4">
-            <MochiButton size="lg" className="gap-2">
-              Explore Concept <ArrowRight className="w-4 h-4" />
+          <div className="flex flex-wrap gap-6 pt-6 justify-center md:justify-start">
+            <MochiButton size="lg" className="group">
+              Get Started <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </MochiButton>
             <MochiButton variant="secondary" size="lg">
-              Documentation
+              View Specs
             </MochiButton>
           </div>
         </div>
 
-        <div className="flex-1 relative w-full aspect-square md:aspect-auto md:h-[600px] flex items-center justify-center">
-           <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent blur-3xl rounded-full opacity-50 animate-pulse duration-[5000ms]" />
-           <img 
-             src={generatedImage} 
-             alt="Abstract Mochi Glass Shapes" 
-             className="relative z-10 w-full h-full object-contain drop-shadow-2xl animate-mochi-hover"
-           />
+        <div className="flex-1 relative w-full max-w-xl aspect-square flex items-center justify-center">
+           {/* Glow background */}
+           <div className="absolute inset-0 bg-primary/20 blur-[120px] rounded-full scale-150" />
            
-           {/* Floating Cards */}
-           <MochiCard className="absolute -bottom-6 -left-6 md:bottom-20 md:-left-12 w-64 z-20 backdrop-blur-3xl bg-white/80 animate-[bounce_4s_infinite_ease-in-out_1s]">
-             <div className="flex items-center gap-4 mb-3">
-               <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-primary">
-                 <Heart className="w-5 h-5 fill-current" />
+           <div className="relative z-10 w-full h-full p-8 floating">
+             <img 
+               src={generatedImage} 
+               alt="Abstract Mochi Glass Shapes" 
+               className="w-full h-full object-contain drop-shadow-[0_32px_64px_rgba(89,80,70,0.2)]"
+             />
+           </div>
+           
+           {/* Interactive Squishy Elements */}
+           <MochiCard className="absolute -bottom-10 right-0 md:right-10 w-72 z-20 scale-110 animate-[floating_8s_infinite_ease-in-out_1s]">
+             <div className="flex items-center gap-5 mb-4">
+               <div className="w-14 h-14 rounded-3xl bg-primary flex items-center justify-center text-white shadow-inner">
+                 <Heart className="w-7 h-7 fill-current" />
                </div>
                <div>
-                 <h3 className="font-bold text-sm">Human First</h3>
-                 <p className="text-xs text-muted-foreground">Tactile feedback</p>
+                 <h3 className="font-black text-lg">Mochi-ness</h3>
+                 <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">Tactile Score: 99%</p>
                </div>
              </div>
-             <div className="h-2 w-full bg-secondary/50 rounded-full overflow-hidden">
-               <div className="h-full w-2/3 bg-primary rounded-full" />
+             <div className="h-4 w-full bg-secondary rounded-full overflow-hidden shadow-inner">
+               <div className="h-full w-[90%] bg-primary rounded-full animate-[pulse_3s_infinite]" />
              </div>
            </MochiCard>
         </div>
       </section>
 
-      {/* Philosophy Grid */}
-      <section className="py-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <MochiCard className="md:col-span-2 relative overflow-hidden group">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-primary/20 transition-colors" />
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Layers className="w-6 h-6 text-primary" />
-            Claymorphism & Glassmorphism
-          </h2>
-          <p className="text-muted-foreground leading-relaxed max-w-xl">
-            We fuse the depth and softness of clay (40%) with the modern transparency of glass (30%). 
-            The result is an interface that feels like "frosted candy" or "soft electronics." 
-            It invites touch and reduces digital fatigue.
+      {/* Philosophy Section */}
+      <section className="py-32">
+        <div className="text-center mb-20 space-y-4">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight">Built to be Touched</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-medium">
+            We've combined deep claymorphism with soft glass for a unique 3D feel.
           </p>
-          <div className="mt-8 grid grid-cols-2 gap-4">
-             <div className="p-4 bg-background/50 rounded-2xl border border-white/20">
-               <div className="text-xs font-bold uppercase text-muted-foreground mb-2">Structure</div>
-               <div className="h-8 w-2/3 bg-white/80 rounded-lg mb-2 shadow-sm" />
-               <div className="h-4 w-full bg-white/40 rounded-md" />
-             </div>
-             <div className="p-4 bg-primary/10 rounded-2xl border border-primary/10">
-               <div className="text-xs font-bold uppercase text-primary mb-2">Accent</div>
-               <div className="h-8 w-1/2 bg-primary rounded-lg mb-2 shadow-sm" />
-               <div className="h-4 w-3/4 bg-primary/30 rounded-md" />
-             </div>
-          </div>
-        </MochiCard>
-
-        <MochiCard className="flex flex-col justify-center items-center text-center space-y-6 bg-gradient-to-b from-white/70 to-white/40">
-           <div className="w-20 h-20 rounded-3xl bg-primary flex items-center justify-center shadow-lg text-white transform rotate-3 transition-transform hover:rotate-0">
-             <Smile className="w-10 h-10" />
-           </div>
-           <div>
-             <h3 className="text-xl font-bold mb-2">Playful Minimal</h3>
-             <p className="text-sm text-muted-foreground">
-               Adult Chibi 3D aesthetics meets rigorous grid systems.
-             </p>
-           </div>
-           <MochiButton size="sm" variant="ghost">Learn More</MochiButton>
-        </MochiCard>
-      </section>
-
-      {/* Interactive Elements Showcase */}
-      <section className="py-12">
-        <h2 className="text-3xl font-bold mb-10 text-center">Interactive Elements</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-           {/* Card 1 */}
-           <MochiCard className="hover:scale-[1.02] transition-transform cursor-pointer">
-             <div className="h-32 rounded-2xl bg-secondary mb-4 flex items-center justify-center text-4xl">
-               🥪
-             </div>
-             <h3 className="font-bold text-lg mb-1">Sandwich Layout</h3>
-             <p className="text-sm text-muted-foreground">Stacked layers for depth.</p>
-           </MochiCard>
-           
-           {/* Card 2 */}
-           <MochiCard className="hover:scale-[1.02] transition-transform cursor-pointer">
-             <div className="h-32 rounded-2xl bg-[#E8F1F2] mb-4 flex items-center justify-center text-4xl">
-               💧
-             </div>
-             <h3 className="font-bold text-lg mb-1">Fluid Motion</h3>
-             <p className="text-sm text-muted-foreground">Organic transitions.</p>
-           </MochiCard>
-
-           {/* Card 3 */}
-           <MochiCard className="hover:scale-[1.02] transition-transform cursor-pointer">
-             <div className="h-32 rounded-2xl bg-[#FFF8E7] mb-4 flex items-center justify-center text-4xl">
-               🧸
-             </div>
-             <h3 className="font-bold text-lg mb-1">Soft Touch</h3>
-             <p className="text-sm text-muted-foreground">Low rebound buttons.</p>
-           </MochiCard>
-
-           {/* Card 4 */}
-           <MochiCard className="hover:scale-[1.02] transition-transform cursor-pointer">
-             <div className="h-32 rounded-2xl bg-[#FDEFEF] mb-4 flex items-center justify-center text-4xl">
-               🌸
-             </div>
-             <h3 className="font-bold text-lg mb-1">Gentle Color</h3>
-             <p className="text-sm text-muted-foreground">Calming palette.</p>
-           </MochiCard>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {[
+            { icon: <Smile className="w-8 h-8" />, title: "Friendly UI", desc: "No sharp edges, just soft curves and warm colors." },
+            { icon: <Sparkles className="w-8 h-8" />, title: "Inner Glow", desc: "Subsurface scattering effects for a realistic mochi look." },
+            { icon: <Star className="w-8 h-8" />, title: "Bounce Logic", desc: "Every interaction is springy and responsive." }
+          ].map((item, i) => (
+            <MochiCard key={i} className="group hover:-translate-y-4 transition-all duration-500 text-center py-12 px-10">
+              <div className="w-20 h-20 rounded-[2.5rem] bg-secondary flex items-center justify-center text-primary mb-8 mx-auto shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                {item.icon}
+              </div>
+              <h3 className="text-2xl font-black mb-4">{item.title}</h3>
+              <p className="text-muted-foreground leading-relaxed font-medium">{item.desc}</p>
+            </MochiCard>
+          ))}
         </div>
       </section>
 
-      {/* Input Field Showcase */}
-      <section className="py-20 w-full max-w-2xl mx-auto">
-        <MochiCard>
-          <h3 className="text-2xl font-bold mb-6 text-center">Join the Waitlist</h3>
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <label className="text-sm font-bold ml-1 text-muted-foreground">First Name</label>
-                <input 
-                  type="text" 
-                  className="w-full h-12 rounded-2xl bg-white/50 border border-transparent focus:bg-white focus:border-primary/50 focus:ring-4 focus:ring-primary/10 transition-all px-4 outline-none placeholder:text-muted-foreground/50 text-foreground"
-                  placeholder="Mochi"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-bold ml-1 text-muted-foreground">Last Name</label>
-                <input 
-                  type="text" 
-                  className="w-full h-12 rounded-2xl bg-white/50 border border-transparent focus:bg-white focus:border-primary/50 focus:ring-4 focus:ring-primary/10 transition-all px-4 outline-none placeholder:text-muted-foreground/50 text-foreground"
-                  placeholder="Designer"
-                />
-              </div>
+      {/* Squishy Button Showcase */}
+      <section className="py-24 bg-white/30 backdrop-blur-xl rounded-[4rem] border border-white/60 shadow-inner px-12 overflow-hidden">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-16">
+          <div className="flex-1 space-y-6">
+            <h2 className="text-4xl font-black">Low Rebound <br/>Interaction</h2>
+            <p className="text-muted-foreground text-lg font-medium leading-relaxed">
+              Experience buttons that feel like pressing into a soft pillow. 
+              Our "Mochi-Bounce" physics provides satisfying tactile feedback.
+            </p>
+            <div className="flex gap-4">
+               <MochiButton variant="secondary" className="px-12">Press Me</MochiButton>
+               <MochiButton size="icon" className="rounded-full"><Smile /></MochiButton>
             </div>
-            <div className="space-y-2">
-              <label className="text-sm font-bold ml-1 text-muted-foreground">Email Address</label>
-              <input 
-                type="email" 
-                className="w-full h-12 rounded-2xl bg-white/50 border border-transparent focus:bg-white focus:border-primary/50 focus:ring-4 focus:ring-primary/10 transition-all px-4 outline-none placeholder:text-muted-foreground/50 text-foreground"
-                placeholder="hello@mochi.design"
-              />
+          </div>
+          <div className="flex-1 grid grid-cols-2 gap-6 scale-110">
+            <div className="space-y-6 pt-12">
+              <div className="h-40 bg-primary/20 rounded-[3rem] border-4 border-white/60 shadow-xl floating" />
+              <div className="h-24 bg-white/60 rounded-[2rem] border-2 border-white shadow-lg" />
             </div>
-            <div className="pt-4">
-              <MochiButton className="w-full" size="lg">
-                Get Early Access
-              </MochiButton>
+            <div className="space-y-6">
+              <div className="h-24 bg-white/60 rounded-[2rem] border-2 border-white shadow-lg" />
+              <div className="h-40 bg-secondary rounded-[3rem] border-4 border-white/60 shadow-xl floating [animation-delay:1s]" />
             </div>
-          </form>
-        </MochiCard>
+          </div>
+        </div>
       </section>
     </Layout>
   );

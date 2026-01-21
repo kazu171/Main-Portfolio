@@ -14,23 +14,23 @@ const MochiButton = React.forwardRef<HTMLButtonElement, MochiButtonProps>(
     const Comp = asChild ? Slot : "button";
     
     const variants = {
-      primary: "bg-primary text-white hover:brightness-105 active:bg-primary/90 shadow-[0_4px_14px_rgba(255,191,168,0.4)]",
-      secondary: "bg-white text-foreground hover:bg-white/80 border border-transparent hover:border-border/50 shadow-[0_4px_14px_rgba(0,0,0,0.03)]",
-      ghost: "bg-transparent text-muted-foreground hover:bg-black/5 hover:text-foreground shadow-none active:shadow-none active:scale-100",
+      primary: "mochi-button-primary hover:brightness-105 active:brightness-95",
+      secondary: "bg-white text-foreground hover:bg-white/90 border border-white/80",
+      ghost: "bg-transparent text-muted-foreground hover:bg-black/5 hover:text-foreground shadow-none active:shadow-none active:scale-95",
     };
 
     const sizes = {
-      sm: "h-9 px-4 text-xs rounded-xl",
-      md: "h-12 px-6 text-sm rounded-2xl",
-      lg: "h-14 px-8 text-base rounded-2xl",
-      icon: "h-12 w-12 flex items-center justify-center rounded-2xl",
+      sm: "h-10 px-5 text-xs font-extrabold",
+      md: "h-14 px-8 text-sm font-extrabold",
+      lg: "h-16 px-10 text-base font-extrabold",
+      icon: "h-14 w-14 flex items-center justify-center font-extrabold",
     };
 
     return (
       <Comp
         ref={ref}
         className={cn(
-          "mochi-button inline-flex items-center justify-center font-bold tracking-wide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none",
+          "mochi-button inline-flex items-center justify-center tracking-wider uppercase focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20 disabled:opacity-50 disabled:pointer-events-none",
           variants[variant],
           sizes[size],
           className
