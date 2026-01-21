@@ -52,7 +52,7 @@
 
 @layer utilities {
   .mochi-card {
-    @apply bg-white/70 backdrop-blur-2xl border border-white/60;
+    @apply bg-white/50 backdrop-blur-3xl border border-white/70;
     border-radius: var(--radius-lg);
     /* Claymorphism: Double drop shadow + double inner shadow */
     box-shadow:
@@ -60,10 +60,10 @@
       0 20px 40px -15px rgba(89, 80, 70, 0.12),
       0 10px 20px -10px rgba(89, 80, 70, 0.08),
       /* Inner soft lighting */
-      inset 0 4px 8px rgba(255, 255, 255, 0.9),
-      inset 0 -4px 8px rgba(89, 80, 70, 0.03),
+      inset 0 4px 8px rgba(255, 255, 255, 0.95),
+      inset 0 -4px 8px rgba(89, 80, 70, 0.02),
       /* Inner edge highlight */
-      inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+      inset 0 0 0 2px rgba(255, 255, 255, 0.8);
   }
 
   .mochi-button {

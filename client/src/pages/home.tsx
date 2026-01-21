@@ -44,6 +44,9 @@ export default function Home() {
            {/* Glow background */}
            <div className="absolute inset-0 bg-primary/20 blur-[120px] rounded-full scale-150" />
            
+           {/* Glass Panel Background */}
+           <div className="absolute inset-0 bg-white/20 backdrop-blur-3xl rounded-[4rem] border border-white/40 shadow-xl" />
+           
            <div className="relative z-10 w-full h-full p-8 floating flex items-center justify-center">
              {/* Chibi Character Overlay */}
              <div className="w-3/4 h-3/4 animate-[floating_10s_infinite_ease-in-out_2s]">
