@@ -22,39 +22,39 @@ type Content = {
 
 const translations: Record<"en" | "ja", Content> = {
   en: {
-    badge: "Soft Tech Era",
-    title1: "Squishy",
-    title2: "Design",
-    heroDesc: "Interfaces that feel like a warm hug. Tactile, bouncy, and delightfully human.",
-    btnStart: "Get Started",
-    btnSpecs: "View Specs",
-    phiTitle: "Built to be Touched",
-    phiDesc: "We've combined deep claymorphism with soft glass for a unique 3D feel.",
+    badge: "The Soft Tech Era",
+    title1: "Delightfully",
+    title2: "Squishy",
+    heroDesc: "Interfaces that feel like a warm hug. Soft, springy, and wonderfully alive.",
+    btnStart: "Start Exploring",
+    btnSpecs: "See the Details",
+    phiTitle: "Made to Be Touched",
+    phiDesc: "We blend the depth of clay with the clarity of glass—creating surfaces that invite your fingertips.",
     cards: [
-      { title: "Friendly UI", desc: "No sharp edges, just soft curves and warm colors." },
-      { title: "Inner Glow", desc: "Subsurface scattering effects for a realistic mochi look." },
-      { title: "Bounce Logic", desc: "Every interaction is springy and responsive." }
+      { title: "Gentle by Design", desc: "No harsh edges here. Just soft curves and colors that feel like home." },
+      { title: "Lit from Within", desc: "Subtle inner glow mimics the way light passes through real mochi." },
+      { title: "Spring in Every Click", desc: "Interactions that bounce back—responsive, playful, satisfying." }
     ],
-    showcaseTitle: "Low Rebound Interaction",
-    showcaseDesc: "Experience buttons that feel like pressing into a soft pillow. Our Mochi-Bounce physics provides satisfying tactile feedback.",
-    showcaseBtn: "Press Me"
+    showcaseTitle: "The Joy of Low Rebound",
+    showcaseDesc: "Buttons that yield like a soft pillow. Our mochi-bounce physics delivers that perfect, satisfying give.",
+    showcaseBtn: "Go Ahead, Press"
   },
   ja: {
-    badge: "ソフトテックの時代",
-    title1: "ぷにぷに",
-    title2: "デザイン",
-    heroDesc: "あたたかい抱擁のようなインターフェース。触覚的で弾力があり、驚くほど人間味にあふれています。",
-    btnStart: "はじめる",
-    btnSpecs: "仕様を見る",
-    phiTitle: "触れるために生まれた",
-    phiDesc: "深いクレイモーフィズムと柔らかなガラスを組み合わせ、独自の3D感を実現しました。",
+    badge: "やわらかいテクノロジー",
+    title1: "ふれたくなる",
+    title2: "やさしさ",
+    heroDesc: "冷たいはずの画面が、なぜかあたたかい。ぷにっと押したくなる、人肌のインターフェース。",
+    btnStart: "体験する",
+    btnSpecs: "くわしく見る",
+    phiTitle: "ふれることから、はじまる",
+    phiDesc: "透明感と、もちもちの弾力. ガラスのようにクリアで、お餅のようにやわらかい、新しい手ざわりです。",
     cards: [
-      { title: "やさしいUI", desc: "鋭い角をなくし、柔らかな曲線と温かみのある色使いを採用。" },
-      { title: "内側からの輝き", desc: "本物の餅のような質感を再現する、内部散乱エフェクト。" },
-      { title: "はずむロジック", desc: "すべてのインタラクションに弾力と反応の良さを。" }
+      { title: "まるい、やさしい", desc: "とがったものは、ひとつもない。曲線と、ぬくもりのある色だけ。" },
+      { title: "内側から、ほのかに", desc: "光が奥からにじみ出るような、本物のお餅みたいな透け感。" },
+      { title: "押すと、もどってくる", desc: "ぽよん、と返ってくる心地よさ。すべてに弾力を。" }
     ],
-    showcaseTitle: "低反発な心地よさ",
-    showcaseDesc: "柔らかいクッションを押し込むようなボタンを体験してください。「モチ・バウンス」物理学が心地よいフィードバックを提供します。",
+    showcaseTitle: "低反発の、ここちよさ",
+    showcaseDesc: "やわらかい枕に指が沈むような、ボタン。押した感触が、ちゃんと返ってくる。",
     showcaseBtn: "押してみて"
   }
 };
