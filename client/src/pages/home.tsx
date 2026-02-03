@@ -108,10 +108,10 @@ export default function Home({ lang }: HomeProps) {
           </p>
           
           <div className="flex flex-wrap gap-6 pt-6 justify-center md:justify-start">
-            <MochiButton size="lg" className="group">
+            <MochiButton size="lg" className="group" onClick={() => setLocation(`/${lang}/contact`)}>
               {t.btnStart} <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </MochiButton>
-            <MochiButton variant="secondary" size="lg">
+            <MochiButton variant="secondary" size="lg" onClick={() => setLocation(`/${lang}/what-i-do`)}>
               {t.btnSpecs}
             </MochiButton>
           </div>
@@ -182,8 +182,8 @@ export default function Home({ lang }: HomeProps) {
               {t.showcaseDesc}
             </p>
             <div className="flex gap-4">
-               <MochiButton variant="secondary" className="px-12">{t.showcaseBtn}</MochiButton>
-               <MochiButton size="icon" className="rounded-full"><Smile /></MochiButton>
+               <MochiButton variant="secondary" className="px-12" onClick={() => setLocation(`/${lang}/contact`)}>{t.showcaseBtn}</MochiButton>
+               <MochiButton size="icon" className="rounded-full" onClick={() => setLocation(`/${lang}/about`)}><Smile /></MochiButton>
             </div>
           </div>
           <div className="flex-1 grid grid-cols-2 gap-6 scale-110">
