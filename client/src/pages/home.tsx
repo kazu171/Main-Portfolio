@@ -20,42 +20,42 @@ type Content = {
   showcaseBtn: string;
 };
 
-const translations: Record<"en" | "ja", Content> = {
+const translations: Record<"en" | "ja", any> = {
   en: {
-    badge: "The Soft Tech Era",
-    title1: "Delightfully",
-    title2: "Squishy",
-    heroDesc: "Interfaces that feel like a warm hug. Soft, springy, and wonderfully alive.",
-    btnStart: "Start Exploring",
-    btnSpecs: "See the Details",
-    phiTitle: "Made to Be Touched",
-    phiDesc: "We blend the depth of clay with the clarity of glass—creating surfaces that invite your fingertips.",
+    badge: "AI Marketing Engineer",
+    title1: "Break Through the Limits",
+    title2: "with Systems.",
+    heroDesc: "I am an AI Marketing Engineer who implements your \"winning formula\" into a marketing system that runs 24/7.",
+    btnStart: "Let's Consult",
+    btnSpecs: "See What I Can Do",
+    phiTitle: "Automation is not about mindlessness.",
+    phiDesc: "Introducing tools to eliminate tasks is becoming the standard. However, I do not offer \"build-it-and-forget-it\" automation.",
     cards: [
-      { title: "Gentle by Design", desc: "No harsh edges here. Just soft curves and colors that feel like home." },
-      { title: "Lit from Within", desc: "Subtle inner glow mimics the way light passes through real mochi." },
-      { title: "Spring in Every Click", desc: "Interactions that bounce back—responsive, playful, satisfying." }
+      { title: "I design systems with 'margin'", desc: "Allowing you to refine your product and strategy." },
+      { title: "I value feedback.", desc: "Marketing is about accepting market reactions and using them for the next improvement." },
+      { title: "Data-Driven Growth", desc: "A system that grows alongside your business by gathering necessary data naturally." }
     ],
-    showcaseTitle: "The Joy of Low Rebound",
-    showcaseDesc: "Buttons that yield like a soft pillow. Our mochi-bounce physics delivers that perfect, satisfying give.",
-    showcaseBtn: "Go Ahead, Press"
+    showcaseTitle: "Minimal Communication, Optimal Construction.",
+    showcaseDesc: "No need for endless meetings. Share your current workflow and your ideal state, and I handle the rest.",
+    showcaseBtn: "Consult on Automation"
   },
   ja: {
-    badge: "やわらかいテクノロジー",
-    title1: "ふれたくなる",
-    title2: "やさしさ",
-    heroDesc: "冷たいはずの画面が、なぜかあたたかい。ぷにっと押したくなる、人肌のインターフェース。",
-    btnStart: "体験する",
-    btnSpecs: "くわしく見る",
-    phiTitle: "ふれることから、はじまる",
-    phiDesc: "透明感と、もちもちの弾力. ガラスのようにクリアで、お餅のようにやわらかい、新しい手ざわりです。",
+    badge: "AIマーケティングエンジニア",
+    title1: "仕組みで、",
+    title2: "「個」の限界を突破する。",
+    heroDesc: "あなたの「勝ちパターン」を、24時間365日稼働するマーケティングシステムとして実装する、AIマーケティングエンジニアです。",
+    btnStart: "30分で自動化ポイントを整理する",
+    btnSpecs: "できることを見る →",
+    phiTitle: "自動化は、思考停止ではない。",
+    phiDesc: "ツールを入れて作業をなくすことが、当たり前になりつつあります。しかし、私は「作りっぱなし」の自動化は提供しません。",
     cards: [
-      { title: "まるい、やさしい", desc: "とがったものは、ひとつもない。曲線と、ぬくもりのある色だけ。" },
-      { title: "内側から、ほのかに", desc: "光が奥からにじみ出るような、本物のお餅みたいな透け感。" },
-      { title: "押すと、もどってくる", desc: "ぽよん、と返ってくる心地よさ。すべてに弾力を。" }
+      { title: "「余白」をデザインする", desc: "運用にゆとりを持たせ、あなたが商品や戦略の磨き込みに集中できる環境を作ります。" },
+      { title: "フィードバックを大切にする", desc: "市場の反応を受け取り、次の改善に活かすための仕組みを構築します。" },
+      { title: "事業と共に成長するシステム", desc: "日々の運用を通じて、意思決定に必要なデータが自然と集まる仕組みを作ります。" }
     ],
-    showcaseTitle: "低反発の、ここちよさ",
-    showcaseDesc: "やわらかい枕に指が沈むような、ボタン。押した感触が、ちゃんと返ってくる。",
-    showcaseBtn: "押してみて"
+    showcaseTitle: "最小限のコミュニケーションで、最適な構築を。",
+    showcaseDesc: "延々と続く会議や、膨大なプロジェクト管理は必要ありません。今の流れと、理想の姿を共有してください。",
+    showcaseBtn: "自動化・仕組み化の相談をする"
   }
 };
 
@@ -66,6 +66,12 @@ interface HomeProps {
 export default function Home({ lang }: HomeProps) {
   const [, setLocation] = useLocation();
   const t = translations[lang];
+
+  const icons = [
+    <Sparkles className="w-8 h-8" />,
+    <Heart className="w-8 h-8" />,
+    <Star className="w-8 h-8" />
+  ];
 
   return (
     <Layout className="mochi-texture" lang={lang}>
@@ -120,12 +126,10 @@ export default function Home({ lang }: HomeProps) {
            
            <div className="relative z-10 w-full h-full p-8 floating flex items-center justify-center">
              {/* Chibi Character Overlay */}
-             <div className="w-3/4 h-3/4 animate-[floating_10s_infinite_ease-in-out_2s]">
-               <img 
-                 src={chibiCharacter} 
-                 alt="Cute Chibi Character" 
-                 className="w-full h-full object-contain drop-shadow-xl"
-               />
+             <div className="w-3/4 h-3/4 animate-[floating_10s_infinite_ease-in-out_2s] flex flex-col items-center justify-center text-center p-8 bg-white/40 backdrop-blur-md rounded-3xl border border-white/60">
+                <Sparkles className="w-12 h-12 text-primary mb-4" />
+                <h3 className="text-2xl font-black text-primary leading-tight">AI & Marketing Automation</h3>
+                <p className="mt-2 text-sm font-bold text-muted-foreground uppercase tracking-widest">Powered by n8n & LLM</p>
              </div>
            </div>
            
@@ -133,15 +137,15 @@ export default function Home({ lang }: HomeProps) {
            <MochiCard className="absolute -bottom-10 right-0 md:right-10 w-72 z-20 scale-110 animate-[floating_8s_infinite_ease-in-out_1s]">
              <div className="flex items-center gap-5 mb-4">
                <div className="w-14 h-14 rounded-3xl bg-primary flex items-center justify-center text-white shadow-inner">
-                 <Heart className="w-7 h-7 fill-current" />
+                 <Sparkles className="w-7 h-7 fill-current" />
                </div>
                <div>
-                 <h3 className="font-black text-lg">Mochi-ness</h3>
-                 <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">Tactile Score: 99%</p>
+                 <h3 className="font-black text-lg">System Efficiency</h3>
+                 <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">Automation Score: 99%</p>
                </div>
              </div>
              <div className="h-4 w-full bg-secondary rounded-full overflow-hidden shadow-inner">
-               <div className="h-full w-[90%] bg-primary rounded-full animate-[pulse_3s_infinite]" />
+               <div className="h-full w-[95%] bg-primary rounded-full animate-[pulse_3s_infinite]" />
              </div>
            </MochiCard>
         </div>
@@ -157,10 +161,10 @@ export default function Home({ lang }: HomeProps) {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {t.cards.map((item, i) => (
+          {t.cards.map((item: any, i: number) => (
             <MochiCard key={i} className="group hover:-translate-y-4 transition-all duration-500 text-center py-12 px-10">
               <div className="w-20 h-20 rounded-[2.5rem] bg-secondary flex items-center justify-center text-primary mb-8 mx-auto shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform">
-                {[<Smile className="w-8 h-8" />, <Sparkles className="w-8 h-8" />, <Star className="w-8 h-8" />][i]}
+                {icons[i]}
               </div>
               <h3 className="text-2xl font-black mb-4">{item.title}</h3>
               <p className="text-muted-foreground leading-relaxed font-medium">{item.desc}</p>
