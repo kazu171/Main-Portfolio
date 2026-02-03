@@ -232,7 +232,7 @@ export default function Contact({ lang }: ContactProps) {
                 id="name"
                 name="name"
                 required
-                className="bg-white/50 border-white/60 rounded-xl h-12 text-lg"
+                className="bg-white/50 border-white/60 rounded-xl h-14 text-lg font-medium placeholder:text-muted-foreground/70 placeholder:font-normal"
               />
             </div>
 
@@ -246,7 +246,7 @@ export default function Contact({ lang }: ContactProps) {
                 name="email"
                 type="email"
                 required
-                className="bg-white/50 border-white/60 rounded-xl h-12 text-lg"
+                className="bg-white/50 border-white/60 rounded-xl h-14 text-lg font-medium placeholder:text-muted-foreground/70 placeholder:font-normal"
               />
             </div>
 
@@ -260,7 +260,7 @@ export default function Contact({ lang }: ContactProps) {
                 name="business"
                 placeholder={t.form.businessPlaceholder}
                 required
-                className="bg-white/50 border-white/60 rounded-xl min-h-[120px] text-lg"
+                className="bg-white/50 border-white/60 rounded-xl min-h-[140px] text-lg font-medium leading-relaxed placeholder:text-muted-foreground/70 placeholder:font-normal"
               />
             </div>
 
@@ -274,7 +274,7 @@ export default function Contact({ lang }: ContactProps) {
                 name="challenges"
                 placeholder={t.form.challengesPlaceholder}
                 required
-                className="bg-white/50 border-white/60 rounded-xl min-h-[120px] text-lg"
+                className="bg-white/50 border-white/60 rounded-xl min-h-[140px] text-lg font-medium leading-relaxed placeholder:text-muted-foreground/70 placeholder:font-normal"
               />
             </div>
 
@@ -285,18 +285,17 @@ export default function Contact({ lang }: ContactProps) {
                 {t.toolOptions.map((tool) => (
                   <label
                     key={tool}
-                    className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 cursor-pointer transition-all ${
-                      selectedTools.includes(tool)
+                    className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 cursor-pointer transition-all ${selectedTools.includes(tool)
                         ? 'bg-primary/20 border-primary text-primary'
                         : 'bg-white/50 border-white/60 hover:border-primary/40'
-                    }`}
+                      }`}
                   >
                     <Checkbox
                       checked={selectedTools.includes(tool)}
                       onCheckedChange={() => handleToolToggle(tool)}
                       className="sr-only"
                     />
-                    <span className="font-medium text-sm">{tool}</span>
+                    <span className="font-semibold text-base">{tool}</span>
                   </label>
                 ))}
               </div>
@@ -305,7 +304,7 @@ export default function Contact({ lang }: ContactProps) {
                   placeholder={t.form.otherToolsPlaceholder}
                   value={otherTools}
                   onChange={(e) => setOtherTools(e.target.value)}
-                  className="bg-white/50 border-white/60 rounded-xl h-12 mt-3"
+                  className="bg-white/50 border-white/60 rounded-xl h-14 text-lg font-medium mt-3 placeholder:text-muted-foreground/70 placeholder:font-normal"
                 />
               ) : null}
             </div>
@@ -317,11 +316,10 @@ export default function Contact({ lang }: ContactProps) {
                 {t.contactMethods.map((method) => (
                   <label
                     key={method.value}
-                    className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 cursor-pointer transition-all ${
-                      contactMethod === method.value
+                    className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 cursor-pointer transition-all ${contactMethod === method.value
                         ? 'bg-primary/20 border-primary text-primary'
                         : 'bg-white/50 border-white/60 hover:border-primary/40'
-                    }`}
+                      }`}
                   >
                     <input
                       type="radio"
@@ -331,7 +329,7 @@ export default function Contact({ lang }: ContactProps) {
                       onChange={(e) => setContactMethod(e.target.value)}
                       className="sr-only"
                     />
-                    <span className="font-medium text-sm">{method.label}</span>
+                    <span className="font-semibold text-base">{method.label}</span>
                   </label>
                 ))}
               </div>
@@ -340,7 +338,7 @@ export default function Contact({ lang }: ContactProps) {
                   placeholder={t.form.otherContactPlaceholder}
                   value={otherContact}
                   onChange={(e) => setOtherContact(e.target.value)}
-                  className="bg-white/50 border-white/60 rounded-xl h-12 mt-3"
+                  className="bg-white/50 border-white/60 rounded-xl h-14 text-lg font-medium mt-3 placeholder:text-muted-foreground/70 placeholder:font-normal"
                 />
               )}
             </div>

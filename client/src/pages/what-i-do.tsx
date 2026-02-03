@@ -164,22 +164,22 @@ export default function WhatIDo({ lang }: WhatIDoProps) {
               </div>
 
               <div className="space-y-4">
-                <div className="p-4 bg-destructive/10 rounded-xl border border-destructive/20">
-                  <p className="text-sm font-medium text-destructive/80">
+                <div className="p-5 bg-destructive/10 rounded-xl border border-destructive/20">
+                  <p className="text-base font-semibold text-destructive/90 leading-relaxed">
                     <span className="font-black">Before:</span> {solution.data.before}
                   </p>
                 </div>
 
-                <div className="p-4 bg-primary/10 rounded-xl border border-primary/20">
-                  <p className="text-sm font-black text-primary mb-1">{solution.data.afterTitle}</p>
-                  <p className="text-sm text-foreground/80">{solution.data.afterBody}</p>
+                <div className="p-5 bg-primary/10 rounded-xl border border-primary/20">
+                  <p className="text-base font-black text-primary mb-2">{solution.data.afterTitle}</p>
+                  <p className="text-base text-foreground/90 font-medium leading-relaxed">{solution.data.afterBody}</p>
                 </div>
 
                 <div className="pt-4 border-t border-border">
-                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
+                  <p className="text-sm font-black text-muted-foreground uppercase tracking-wider">
                     Tech Stack
                   </p>
-                  <p className="text-sm text-foreground mt-1">{solution.data.tech}</p>
+                  <p className="text-base text-foreground font-medium mt-2">{solution.data.tech}</p>
                 </div>
               </div>
             </MochiCard>
