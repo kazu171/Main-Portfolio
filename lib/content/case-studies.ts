@@ -5,6 +5,7 @@ export const caseStudies: CaseStudyArticle[] = [
   {
     slug: 'tanaka-tax-office',
     category: 'case-study',
+    enabled: false,
     titleEn: 'Automated Practice Management for a Solo Tax Accountant',
     titleJa: '一人税理士事務所の業務自動化システム',
     descriptionEn: '60 hours/month saved. Invoice collection rate 78% → 95%. Capacity for 12 new clients.',
@@ -109,6 +110,7 @@ export const caseStudies: CaseStudyArticle[] = [
   {
     slug: 'sato-wellness-shop',
     category: 'case-study',
+    enabled: true,
     titleEn: 'Content & CRM Automation for an Organic E-Commerce Brand',
     titleJa: 'オーガニックEC事業のコンテンツ＆CRM自動化',
     descriptionEn: 'SNS time 2h/day → 15min. Repeat rate 22% → 38%. Organic traffic +180%.',

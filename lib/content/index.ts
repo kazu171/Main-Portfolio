@@ -8,7 +8,7 @@ import { caseStudies } from './case-studies';
 import { Article } from './types';
 
 export function getAllArticles(): Article[] {
-  return [...workflows, ...caseStudies];
+  return [...workflows, ...caseStudies].filter((a) => a.enabled !== false);
 }
 
 export function getArticleBySlug(slug: string): Article | undefined {

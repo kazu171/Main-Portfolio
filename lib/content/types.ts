@@ -5,6 +5,7 @@ export type Locale = 'en' | 'ja';
 export interface WorkflowArticle {
   slug: string;
   category: 'workflow';
+  enabled?: boolean;
   solutionCategory: SolutionCategory;
   titleEn: string;
   titleJa: string;
@@ -23,6 +24,7 @@ export interface WorkflowArticle {
 export interface CaseStudyArticle {
   slug: string;
   category: 'case-study';
+  enabled?: boolean;
   titleEn: string;
   titleJa: string;
   descriptionEn: string;
