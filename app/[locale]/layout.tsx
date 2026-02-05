@@ -4,6 +4,7 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {locales} from '@/i18n';
+import { Navbar } from '@/components/ui/navbar';
 import '../globals.css';
 
 const nunito = Nunito({
@@ -74,6 +75,7 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${nunito.variable} ${zenMaruGothic.variable}`}>
       <body>
         <NextIntlClientProvider messages={messages}>
+          <Navbar locale={locale as 'en' | 'ja'} />
           {children}
         </NextIntlClientProvider>
       </body>

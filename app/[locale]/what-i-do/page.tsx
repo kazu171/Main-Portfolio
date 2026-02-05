@@ -6,7 +6,7 @@ import { Metadata } from 'next';
 import { useRouter } from 'next/navigation';
 import { MochiCard } from "@/components/ui/mochi-card";
 import { MochiButton } from "@/components/ui/mochi-button";
-import { ArrowRight, Languages, MessageSquare, FileSpreadsheet, Users, Sparkles, Zap, ArrowRightLeft } from "lucide-react";
+import { ArrowRight, MessageSquare, FileSpreadsheet, Users, Sparkles, Zap, ArrowRightLeft } from "lucide-react";
 
 const translations = {
   en: {
@@ -45,6 +45,7 @@ const translations = {
     arrow: '→ n8n + AI →',
     order: 'Order',
     orderDesc: 'Automated flows, integrated systems, captured value',
+    casesButton: 'View Real Examples',
     ctaTitle: 'Ready to Automate?',
     ctaText: 'Tell me your current flow exactly as it is.',
     ctaButton: 'Start the Conversation',
@@ -85,6 +86,7 @@ const translations = {
     arrow: '→ n8n + AI →',
     order: '秩序',
     orderDesc: '自動化されたフロー、統合されたシステム、獲得した価値',
+    casesButton: '具体的な事例を見る',
     ctaTitle: '自動化の準備はできましたか？',
     ctaText: '現在のフローをそのまま教えてください。',
     ctaButton: '相談を始める',
@@ -116,22 +118,9 @@ export default function WhatIDo({ params }: { params: Promise<{ locale: 'en' | '
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center mochi-texture">
-      {/* Language Toggle */}
-      <div className="fixed top-8 right-8 z-50">
-        <MochiButton
-          variant="secondary"
-          size="sm"
-          className="gap-2 rounded-full border-white/60 shadow-xl"
-          onClick={() => router.push(locale === "en" ? "/ja/what-i-do" : "/en/what-i-do")}
-        >
-          <Languages className="w-4 h-4 text-primary" />
-          {locale === "en" ? "日本語" : "English"}
-        </MochiButton>
-      </div>
-
       <main className="w-full max-w-6xl px-6 pb-20">
         {/* Hero Section */}
-        <section className="pt-12 pb-24 md:pt-24 md:pb-32">
+        <section className="pt-24 pb-24 md:pt-32 md:pb-32">
           <div className="text-center space-y-8 max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/60 backdrop-blur-xl border border-white/80 text-[10px] font-black text-primary uppercase tracking-[0.2em] shadow-lg">
               <Sparkles className="w-3.5 h-3.5 fill-primary/20" />
@@ -186,6 +175,17 @@ export default function WhatIDo({ params }: { params: Promise<{ locale: 'en' | '
                 </div>
               </MochiCard>
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <MochiButton
+              variant="secondary"
+              size="lg"
+              className="group"
+              onClick={() => router.push(`/${locale}/cases`)}
+            >
+              {t.casesButton} <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </MochiButton>
           </div>
         </section>
 

@@ -5,7 +5,7 @@ import { use } from 'react';
 import { useRouter } from 'next/navigation';
 import { MochiCard } from "@/components/ui/mochi-card";
 import { MochiButton } from "@/components/ui/mochi-button";
-import { Languages, Sparkles, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { Sparkles, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -142,19 +142,7 @@ export default function Contact({ params }: { params: Promise<{ locale: 'en' | '
   if (formState === 'success') {
     return (
       <div className="min-h-screen w-full flex flex-col items-center mochi-texture">
-        <div className="fixed top-8 right-8 z-50">
-          <MochiButton
-            variant="secondary"
-            size="sm"
-            className="gap-2 rounded-full border-white/60 shadow-xl"
-            onClick={() => router.push(locale === "en" ? "/ja/contact" : "/en/contact")}
-          >
-            <Languages className="w-4 h-4 text-primary" />
-            {locale === "en" ? "日本語" : "English"}
-          </MochiButton>
-        </div>
-
-        <main className="w-full max-w-6xl px-6 pb-20 flex-1 flex items-center justify-center">
+        <main className="w-full max-w-6xl px-6 pb-20 pt-24 md:pt-32 flex-1 flex items-center justify-center">
           <MochiCard className="p-12 text-center max-w-lg">
             <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="w-10 h-10 text-primary" />
@@ -177,19 +165,7 @@ export default function Contact({ params }: { params: Promise<{ locale: 'en' | '
   if (formState === 'error') {
     return (
       <div className="min-h-screen w-full flex flex-col items-center mochi-texture">
-        <div className="fixed top-8 right-8 z-50">
-          <MochiButton
-            variant="secondary"
-            size="sm"
-            className="gap-2 rounded-full border-white/60 shadow-xl"
-            onClick={() => router.push(locale === "en" ? "/ja/contact" : "/en/contact")}
-          >
-            <Languages className="w-4 h-4 text-primary" />
-            {locale === "en" ? "日本語" : "English"}
-          </MochiButton>
-        </div>
-
-        <main className="w-full max-w-6xl px-6 pb-20 flex-1 flex items-center justify-center">
+        <main className="w-full max-w-6xl px-6 pb-20 pt-24 md:pt-32 flex-1 flex items-center justify-center">
           <MochiCard className="p-12 text-center max-w-lg">
             <div className="w-20 h-20 rounded-full bg-destructive/20 flex items-center justify-center mx-auto mb-6">
               <AlertCircle className="w-10 h-10 text-destructive" />
@@ -211,22 +187,9 @@ export default function Contact({ params }: { params: Promise<{ locale: 'en' | '
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center mochi-texture">
-      {/* Language Toggle */}
-      <div className="fixed top-8 right-8 z-50">
-        <MochiButton
-          variant="secondary"
-          size="sm"
-          className="gap-2 rounded-full border-white/60 shadow-xl"
-          onClick={() => router.push(locale === "en" ? "/ja/contact" : "/en/contact")}
-        >
-          <Languages className="w-4 h-4 text-primary" />
-          {locale === "en" ? "日本語" : "English"}
-        </MochiButton>
-      </div>
-
       <main className="w-full max-w-6xl px-6 pb-20">
         {/* Hero Section */}
-        <section className="pt-12 pb-16 md:pt-24 md:pb-20">
+        <section className="pt-24 pb-16 md:pt-32 md:pb-20">
           <div className="text-center space-y-8 max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/60 backdrop-blur-xl border border-white/80 text-[10px] font-black text-primary uppercase tracking-[0.2em] shadow-lg">
               <Sparkles className="w-3.5 h-3.5 fill-primary/20" />

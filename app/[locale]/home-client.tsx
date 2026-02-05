@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { MochiCard } from "@/components/ui/mochi-card";
 import { MochiButton } from "@/components/ui/mochi-button";
-import { ArrowRight, Heart, Sparkles, Smile, Star, Languages } from "lucide-react";
+import { ArrowRight, Heart, Sparkles, Smile, Star } from "lucide-react";
 
 const translations: Record<"en" | "ja", any> = {
   en: {
@@ -56,22 +56,9 @@ export default function HomeClient({ locale }: { locale: 'en' | 'ja' }) {
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center mochi-texture">
-      {/* Language Toggle */}
-      <div className="fixed top-8 right-8 z-50">
-        <MochiButton
-          variant="secondary"
-          size="sm"
-          className="gap-2 rounded-full border-white/60 shadow-xl"
-          onClick={() => router.push(locale === "en" ? "/ja" : "/en")}
-        >
-          <Languages className="w-4 h-4 text-primary" />
-          {locale === "en" ? "日本語" : "English"}
-        </MochiButton>
-      </div>
-
       <main className="w-full max-w-6xl px-6 pb-20">
         {/* Hero Section */}
-        <section className="relative pt-12 pb-24 md:pt-24 md:pb-40 flex flex-col md:flex-row items-center gap-16">
+        <section className="relative pt-24 pb-24 md:pt-32 md:pb-40 flex flex-col md:flex-row items-center gap-16">
           <div className="flex-1 space-y-10 z-10 text-center md:text-left">
             <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/60 backdrop-blur-xl border border-white/80 text-[10px] font-black text-primary uppercase tracking-[0.2em] shadow-lg floating">
               <Sparkles className="w-3.5 h-3.5 fill-primary/20" />

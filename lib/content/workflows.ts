@@ -1,0 +1,503 @@
+import { WorkflowArticle } from './types';
+
+export const workflows: WorkflowArticle[] = [
+  // ── Category A: Front-Office Automation ──────────────────────────
+  {
+    slug: 'ai-sns-content-generator',
+    category: 'workflow',
+    solutionCategory: 'A',
+    titleEn: 'AI Multi-Platform Social Media Content Generator',
+    titleJa: 'AI マルチプラットフォーム SNS 投稿自動生成',
+    descriptionEn: 'Generate platform-optimized posts for Twitter, Instagram, and LinkedIn from a single topic.',
+    descriptionJa: '1つのトピックからTwitter・Instagram・LinkedIn向けに最適化された投稿を自動生成。',
+    techStack: ['n8n', 'OpenAI', 'Twitter API', 'Instagram API', 'LinkedIn API'],
+    heroImage: '/images/workflows/wf-01-sns-content.png',
+    sections: {
+      problem: {
+        en: 'Posting to multiple social media platforms daily consumes 2+ hours. Each platform demands different formats, character limits, hashtag strategies, and tone — copying and pasting the same message everywhere looks lazy and performs poorly.',
+        ja: '複数のSNSに毎日投稿すると2時間以上かかる。各プラットフォームでフォーマット、文字数制限、ハッシュタグ戦略、トーンが異なり、同じメッセージをコピペするだけでは手抜きに見え、パフォーマンスも低い。',
+      },
+      solution: {
+        en: 'Feed a single topic, URL, or product update into the workflow. GPT-4o generates platform-specific content: a Twitter thread with hooks, an Instagram caption with relevant hashtags, and a LinkedIn article with professional framing. Each post is queued for scheduled publishing.',
+        ja: 'トピック、URL、または商品情報を1つ入力するだけ。GPT-4oが各プラットフォーム用のコンテンツを生成：フック付きTwitterスレッド、ハッシュタグ付きInstagramキャプション、プロフェッショナルなLinkedIn記事。各投稿は予約配信キューに入る。',
+      },
+      howItWorks: {
+        en: [
+          'Trigger: Manual input or scheduled RSS/webhook for new content',
+          'AI Generation: GPT-4o creates platform-optimized variants with tone and format adjustments',
+          'Review Gate: Posts are sent to Slack/email for optional human approval',
+          'Publishing: Approved posts are scheduled via each platform\'s API',
+          'Analytics: Engagement data is logged to Google Sheets for performance tracking',
+        ],
+        ja: [
+          'トリガー：手動入力、またはRSS/Webhookによる新コンテンツ検知',
+          'AI生成：GPT-4oがトーンとフォーマットを調整し、各プラットフォーム向けバリエーションを作成',
+          'レビュー：投稿をSlack/メールに送信し、任意で人間が承認',
+          '配信：承認された投稿を各プラットフォームAPIで予約投稿',
+          '分析：エンゲージメントデータをGoogleスプレッドシートに記録',
+        ],
+      },
+      results: {
+        en: 'Social media content creation time reduced from 2 hours/day to 15 minutes. Consistent posting frequency maintained across all platforms without burnout.',
+        ja: 'SNSコンテンツ制作時間を1日2時間から15分に短縮。すべてのプラットフォームで投稿頻度を維持しつつ、燃え尽きを防止。',
+      },
+    },
+  },
+  {
+    slug: 'seo-wordpress-auto-publisher',
+    category: 'workflow',
+    solutionCategory: 'A',
+    titleEn: 'SEO-Optimized WordPress Blog Auto-Publisher',
+    titleJa: 'SEO最適化 WordPress ブログ記事自動生成',
+    descriptionEn: 'Auto-generate SEO blog drafts from keyword opportunities and publish to WordPress.',
+    descriptionJa: 'キーワード機会を検知し、SEOブログ記事ドラフトを自動生成してWordPressに公開。',
+    techStack: ['n8n', 'OpenAI', 'WordPress REST API', 'Google Search Console'],
+    heroImage: '/images/workflows/wf-02-seo-blog.png',
+    sections: {
+      problem: {
+        en: 'Blog content is critical for organic search traffic, but writing SEO-optimized articles takes 4-6 hours each. Most solo business owners abandon their blog within months, losing a key acquisition channel.',
+        ja: 'ブログはオーガニック検索流入に不可欠だが、SEO最適化記事の執筆には1本あたり4〜6時間かかる。ほとんどの一人法人事業主は数ヶ月でブログを放置し、重要な集客チャネルを失う。',
+      },
+      solution: {
+        en: 'The workflow monitors Google Search Console for keyword opportunities (high impressions, low click-through), then generates SEO-optimized article drafts with proper heading structure, meta descriptions, and internal linking suggestions. Drafts are published to WordPress for human review before going live.',
+        ja: 'Google Search Consoleからキーワード機会（高インプレッション・低CTR）を監視し、適切な見出し構造・メタディスクリプション・内部リンク提案を含むSEO最適化記事ドラフトを自動生成。人間がレビューした上でWordPressに公開。',
+      },
+      howItWorks: {
+        en: [
+          'Monitor: Weekly scan of Search Console for keyword gaps and opportunities',
+          'Research: AI analyzes top-ranking content for the target keyword',
+          'Draft: GPT-4o generates a structured article with H2/H3 headings, meta tags, and alt text',
+          'Publish: Article is pushed to WordPress as a draft with featured image suggestion',
+          'Notify: Slack/email notification with preview link for human review',
+        ],
+        ja: [
+          '監視：Search Consoleを週次でスキャンし、キーワードギャップと機会を発見',
+          'リサーチ：AIが対象キーワードの上位コンテンツを分析',
+          'ドラフト：GPT-4oがH2/H3見出し、メタタグ、alt属性を含む構造化記事を生成',
+          '公開：記事をアイキャッチ画像提案付きでWordPressに下書き保存',
+          '通知：プレビューリンク付きでSlack/メールに通知し、人間がレビュー',
+        ],
+      },
+      results: {
+        en: 'Blog output increased from 0 to 4 SEO articles per month. Organic search traffic grew 180% within 3 months with minimal manual effort.',
+        ja: 'ブログ出力を月0本から月4本のSEO記事に増加。最小限の手作業で3ヶ月以内にオーガニック検索流入が180%成長。',
+      },
+    },
+  },
+  {
+    slug: 'google-maps-lead-scraper',
+    category: 'workflow',
+    solutionCategory: 'A',
+    titleEn: 'Google Maps Geographic Business Lead Scraper',
+    titleJa: 'Google Maps 地域ビジネスリード自動収集',
+    descriptionEn: 'Automatically collect business leads by area and industry from Google Maps.',
+    descriptionJa: 'エリア×業種でGoogle Mapsからビジネスリードを自動収集。',
+    techStack: ['n8n', 'Google Maps API', 'Google Sheets', 'Gmail'],
+    heroImage: '/images/workflows/wf-03-lead-scraper.png',
+    sections: {
+      problem: {
+        en: 'Finding new business prospects requires hours of manual searching, copying contact details from Google Maps one by one, and maintaining scattered lists. Without a systematic approach, outreach is inconsistent and opportunities are missed.',
+        ja: '新規見込み客を見つけるには、Google Mapsで手動検索し、連絡先を1件ずつコピーし、バラバラなリストを管理する必要がある。体系的なアプローチがなければアウトリーチは一貫せず、機会を逃す。',
+      },
+      solution: {
+        en: 'The workflow searches Google Maps by industry and geographic area (e.g., "tax accountants in Shibuya"), extracts business name, email, phone, rating, and website URL. It deduplicates against your existing contact list and optionally sends personalized outreach emails.',
+        ja: '業種×エリアでGoogle Mapsを検索（例：「渋谷 税理士」）し、社名・メール・電話・評価・WebサイトURLを抽出。既存の連絡先リストと重複排除し、オプションでパーソナライズされた営業メールを送信。',
+      },
+      howItWorks: {
+        en: [
+          'Configure: Set target industry keywords and geographic areas',
+          'Scrape: n8n queries Google Maps API and extracts structured business data',
+          'Deduplicate: Compare results against existing contacts in Google Sheets',
+          'Enrich: Add website and social media links where available',
+          'Outreach: Optionally trigger personalized cold email via Gmail',
+        ],
+        ja: [
+          '設定：ターゲット業種キーワードとエリアを設定',
+          '収集：n8nがGoogle Maps APIからビジネスデータを構造化して抽出',
+          '重複排除：Googleスプレッドシートの既存連絡先と照合',
+          '情報補完：利用可能なWebサイト・SNSリンクを追加',
+          'アウトリーチ：オプションでGmail経由のパーソナライズコールドメールを送信',
+        ],
+      },
+      results: {
+        en: 'Generates 100-500 qualified leads per month at near-zero cost. Replaces hours of manual prospecting with a systematic, repeatable pipeline.',
+        ja: 'ほぼゼロコストで月100〜500件の見込みリードを生成。手動の見込み客探しを体系的で再現性のあるパイプラインに置き換え。',
+      },
+    },
+  },
+  {
+    slug: 'ai-inquiry-concierge',
+    category: 'workflow',
+    solutionCategory: 'A',
+    titleEn: 'AI Inquiry Concierge (Multi-Channel)',
+    titleJa: 'AI 問い合わせコンシェルジュ（マルチチャネル）',
+    descriptionEn: 'AI handles initial responses, hearing, and scheduling across LINE, email, and web forms.',
+    descriptionJa: 'LINE・メール・フォームからの問い合わせにAIが一次対応・ヒアリング・予約調整。',
+    techStack: ['n8n', 'OpenAI', 'LINE Official Account', 'Gmail', 'Google Calendar'],
+    heroImage: '/images/workflows/wf-04-inquiry-concierge.png',
+    sections: {
+      problem: {
+        en: 'Inquiries arrive via LINE, email, and website forms throughout the day. Responding within minutes is critical for conversion, but solo operators cannot monitor all channels 24/7. Delayed responses mean lost leads.',
+        ja: '問い合わせはLINE、メール、Webフォームから終日届く。コンバージョンには数分以内の返答が重要だが、一人事業主が全チャネルを24時間監視するのは不可能。返答の遅れはリード喪失を意味する。',
+      },
+      solution: {
+        en: 'AI reads incoming inquiries across all channels, classifies intent (FAQ, consultation request, urgent), generates contextual first responses, conducts initial hearing questions, and when the prospect is ready, auto-schedules a consultation via Google Calendar.',
+        ja: 'AIが全チャネルの問い合わせを読み取り、意図を分類（FAQ、相談依頼、緊急）。文脈に応じた一次回答を生成し、初期ヒアリング質問を実施。見込み客の準備が整ったら、Googleカレンダーで相談を自動予約。',
+      },
+      howItWorks: {
+        en: [
+          'Receive: Webhook captures inquiries from LINE, Gmail, and web forms',
+          'Classify: AI determines intent type and urgency level',
+          'Respond: Generates a contextual first response using past conversation data',
+          'Hearing: Asks structured follow-up questions to qualify the lead',
+          'Schedule: When ready, offers available slots and books via Google Calendar',
+        ],
+        ja: [
+          '受信：WebhookでLINE、Gmail、Webフォームからの問い合わせを取得',
+          '分類：AIが意図の種類と緊急度を判定',
+          '返答：過去の会話データを使って文脈に応じた一次回答を生成',
+          'ヒアリング：構造化されたフォローアップ質問でリードを精査',
+          '予約：準備が整ったら、空き枠を提示しGoogleカレンダーで予約',
+        ],
+      },
+      results: {
+        en: 'Response time reduced from 24 hours to under 5 minutes. AI handles 80% of initial inquiries autonomously, freeing 3+ hours per day.',
+        ja: '応答時間を24時間から5分以内に短縮。AIが初期問い合わせの80%を自律的に処理し、1日3時間以上を解放。',
+      },
+    },
+  },
+
+  // ── Category B: Back-Office Automation ────────────────────────────
+  {
+    slug: 'ai-invoice-collection',
+    category: 'workflow',
+    solutionCategory: 'B',
+    titleEn: 'AI Invoice Collection & Escalation System',
+    titleJa: 'AI 請求書回収・督促エスカレーションシステム',
+    descriptionEn: 'Automated overdue invoice follow-ups with AI-drafted escalating reminders.',
+    descriptionJa: '未回収請求書にAIが段階的リマインドメールを作成し自動送信。',
+    techStack: ['n8n', 'OpenAI', 'Google Sheets', 'Gmail', 'Slack'],
+    heroImage: '/images/workflows/wf-05-invoice-collection.png',
+    sections: {
+      problem: {
+        en: 'Chasing overdue invoices is awkward and time-consuming. Many solo operators avoid sending reminders out of discomfort, resulting in chronic cash flow problems and tens of thousands of yen left on the table every month.',
+        ja: '未回収請求書の催促は気まずく、時間もかかる。多くの一人事業主は心理的負担からリマインドを避け、慢性的なキャッシュフロー問題と毎月数万円の回収漏れが発生する。',
+      },
+      solution: {
+        en: 'The workflow monitors outstanding invoices in a spreadsheet, sends automated reminder emails at configurable intervals (7, 14, 21, 30 days), with AI drafting increasingly firm but professional messages. You are notified via Slack only when manual escalation is truly needed.',
+        ja: 'スプレッドシートの未回収請求書を監視し、設定可能な間隔（7日、14日、21日、30日）で自動リマインドメールを送信。AIが段階的に丁寧かつ毅然としたメッセージを作成。手動エスカレーションが本当に必要な場合のみSlackで通知。',
+      },
+      howItWorks: {
+        en: [
+          'Track: Monitor invoice spreadsheet for overdue items daily',
+          'Draft: AI generates reminder email matching the escalation stage (polite → firm → formal)',
+          'Send: Automatically send via Gmail with appropriate tone and urgency',
+          'Log: Record all communications and payment status updates',
+          'Escalate: Notify you via Slack/Chatwork only when human intervention is needed',
+        ],
+        ja: [
+          '追跡：請求書スプレッドシートの未回収項目を毎日監視',
+          '文面作成：AIがエスカレーション段階に合ったリマインドメールを生成（丁寧→堅め→正式）',
+          '送信：適切なトーンと緊急度でGmail経由で自動送信',
+          '記録：すべてのコミュニケーションと支払いステータスを記録',
+          'エスカレーション：人間の介入が必要な場合のみSlack/Chatworkで通知',
+        ],
+      },
+      results: {
+        en: 'Invoice collection rate improved from 78% to 95% within payment terms. Eliminated the psychological burden of chasing payments manually.',
+        ja: '請求書回収率が支払い期限内で78%から95%に改善。手動での支払い催促の心理的負担を解消。',
+      },
+    },
+  },
+  {
+    slug: 'invoice-pdf-processor',
+    category: 'workflow',
+    solutionCategory: 'B',
+    titleEn: 'Automated Invoice PDF Processing & Data Entry',
+    titleJa: '請求書 PDF 自動読み取り・データ入力',
+    descriptionEn: 'AI Vision extracts data from PDF invoices and auto-populates your bookkeeping sheet.',
+    descriptionJa: 'PDFをAI Visionで解析し、取引先・金額・明細を自動で帳簿に記帳。',
+    techStack: ['n8n', 'OpenAI Vision', 'Google Sheets', 'Google Drive'],
+    heroImage: '/images/workflows/wf-06-invoice-processor.png',
+    sections: {
+      problem: {
+        en: 'Manually entering invoice data from PDFs into spreadsheets is tedious and error-prone. Each invoice takes 5-10 minutes to process, and data entry mistakes cause accounting headaches at tax time.',
+        ja: 'PDF請求書のデータをスプレッドシートに手入力するのは退屈でミスが起きやすい。1枚あたり5〜10分かかり、入力ミスは確定申告時の頭痛の種になる。',
+      },
+      solution: {
+        en: 'When a PDF invoice arrives via email or is uploaded to Google Drive, GPT-4o Vision extracts vendor name, amount, date, line items, and tax details. Parsed data is written to a structured Google Sheet. Anomalies are flagged for human review.',
+        ja: 'PDF請求書がメールで届くかGoogle Driveにアップロードされると、GPT-4o Visionが取引先名・金額・日付・明細・税金詳細を抽出。構造化されたGoogleスプレッドシートにデータを記入。異常値は人間のレビュー用にフラグ付け。',
+      },
+      howItWorks: {
+        en: [
+          'Detect: Monitor Gmail attachments and Google Drive folder for new PDF invoices',
+          'Extract: GPT-4o Vision reads the PDF and extracts structured data (25+ fields)',
+          'Validate: Cross-check extracted amounts and dates for consistency',
+          'Record: Write validated data to Google Sheets bookkeeping template',
+          'Flag: Alert via Slack if confidence is low or anomalies are detected',
+        ],
+        ja: [
+          '検知：Gmailの添付ファイルとGoogle Driveフォルダで新規PDF請求書を監視',
+          '抽出：GPT-4o VisionがPDFを読み取り、構造化データ（25以上のフィールド）を抽出',
+          '検証：金額と日付の整合性をクロスチェック',
+          '記録：検証済みデータをGoogleスプレッドシートの帳簿テンプレートに記入',
+          'フラグ：信頼度が低い場合や異常を検知した場合はSlackでアラート',
+        ],
+      },
+      results: {
+        en: 'Invoice processing time reduced from 5-10 minutes to under 30 seconds per document. Data entry accuracy improved to 98%+.',
+        ja: '請求書処理時間を1枚あたり5〜10分から30秒以内に短縮。データ入力精度が98%以上に向上。',
+      },
+    },
+  },
+  {
+    slug: 'ai-timesheet-generator',
+    category: 'workflow',
+    solutionCategory: 'B',
+    titleEn: 'AI Timesheet & Work Report Generator',
+    titleJa: 'AI タイムシート・業務報告書自動生成',
+    descriptionEn: 'Auto-generate monthly work reports from calendar and task data.',
+    descriptionJa: 'カレンダーとタスクデータから月次業務報告書をAIが自動生成。',
+    techStack: ['n8n', 'OpenAI', 'Google Calendar', 'Google Sheets', 'Google Docs'],
+    heroImage: '/images/workflows/wf-07-timesheet.png',
+    sections: {
+      problem: {
+        en: 'Creating monthly work reports for clients or compliance is a dreaded end-of-month task. Reconstructing what you did from memory or scattered notes takes hours and the results are often incomplete.',
+        ja: 'クライアントやコンプライアンス向けの月次業務報告書作成は月末の憂鬱な作業。記憶や散在するメモから活動を再構築するのに何時間もかかり、内容も不完全になりがち。',
+      },
+      solution: {
+        en: 'The workflow pulls calendar events, task completions, and email activity data. AI generates formatted timesheet entries and a narrative work report. Output goes to Google Sheets and optionally creates a Google Doc summary for client delivery.',
+        ja: 'カレンダーイベント、タスク完了状況、メール活動データを取得。AIがフォーマット済みのタイムシートと業務報告書を生成。Googleスプレッドシートに出力し、オプションでクライアント提出用のGoogleドキュメントも作成。',
+      },
+      howItWorks: {
+        en: [
+          'Collect: Pull events from Google Calendar and task data from project tools',
+          'Aggregate: Group activities by client, project, and category',
+          'Generate: AI writes timesheet entries and narrative summary',
+          'Format: Output structured data to Google Sheets and optional Google Doc',
+          'Deliver: Send report to client or archive for compliance',
+        ],
+        ja: [
+          '収集：Googleカレンダーのイベントとプロジェクトツールのタスクデータを取得',
+          '集計：クライアント、プロジェクト、カテゴリ別に活動をグループ化',
+          '生成：AIがタイムシートエントリと業務報告書を執筆',
+          'フォーマット：Googleスプレッドシートとオプションでドキュメントに構造化出力',
+          '配信：レポートをクライアントに送付、またはコンプライアンス用にアーカイブ',
+        ],
+      },
+      results: {
+        en: 'Monthly report creation reduced from 8 hours to 30 minutes (review only). Reports are more detailed and consistent than manually written ones.',
+        ja: '月次報告書作成を8時間から30分（レビューのみ）に短縮。手書きよりも詳細で一貫性のあるレポートを実現。',
+      },
+    },
+  },
+  {
+    slug: 'competitor-intelligence-tracker',
+    category: 'workflow',
+    solutionCategory: 'B',
+    titleEn: 'Competitor Intelligence Auto-Tracker',
+    titleJa: '競合情報自動トラッキング',
+    descriptionEn: 'Monitor competitor websites, social media, and pricing with AI-summarized weekly reports.',
+    descriptionJa: '競合のWeb・SNS・価格を定期監視し、AIが変化を要約して週次レポートを配信。',
+    techStack: ['n8n', 'OpenAI', 'HTTP Request', 'Google Sheets', 'Slack'],
+    heroImage: '/images/workflows/wf-08-competitor-intel.png',
+    sections: {
+      problem: {
+        en: 'Staying aware of competitor moves is important but falls off the priority list when you\'re busy with client work. Competitors launch new services, change pricing, or publish content — and you only find out from clients.',
+        ja: '競合の動向把握は重要だが、クライアント業務に追われると優先順位が下がる。競合が新サービスを開始したり、価格を変更したり、コンテンツを公開しても、クライアントから聞いて初めて知ることに。',
+      },
+      solution: {
+        en: 'The workflow periodically monitors competitor websites, social media accounts, and pricing pages. AI summarizes changes and highlights strategic moves. A weekly digest is delivered via Slack/Chatwork with a structured log in Google Sheets.',
+        ja: '競合のWebサイト、SNSアカウント、価格ページを定期的に監視。AIが変更を要約し、戦略的な動きをハイライト。週次ダイジェストをSlack/Chatworkで配信し、Googleスプレッドシートに構造化ログを保存。',
+      },
+      howItWorks: {
+        en: [
+          'Configure: Set competitor URLs, social accounts, and monitoring frequency',
+          'Scrape: n8n fetches web pages and social feeds on schedule',
+          'Compare: Detect changes by comparing with previous snapshots',
+          'Analyze: AI summarizes what changed and why it matters',
+          'Report: Weekly digest to Slack + detailed log in Google Sheets',
+        ],
+        ja: [
+          '設定：競合のURL、SNSアカウント、監視頻度を設定',
+          '取得：n8nがスケジュールに従ってWebページとSNSフィードを取得',
+          '比較：前回のスナップショットと比較して変更を検出',
+          '分析：AIが何が変わったか、なぜ重要かを要約',
+          'レポート：週次ダイジェストをSlackに配信＋Googleスプレッドシートに詳細ログ',
+        ],
+      },
+      results: {
+        en: 'From zero competitive awareness to structured weekly intelligence briefings. Enables proactive rather than reactive business strategy.',
+        ja: '競合情報ゼロの状態から、構造化された週次インテリジェンスブリーフィングへ。受動的ではなく能動的なビジネス戦略を実現。',
+      },
+    },
+  },
+
+  // ── Category C: Fulfillment & CRM Automation ─────────────────────
+  {
+    slug: 'shopify-order-sync-crm',
+    category: 'workflow',
+    solutionCategory: 'C',
+    titleEn: 'Shopify Order-to-Sheet Sync & Customer Tagging',
+    titleJa: 'Shopify 受注→スプレッドシート同期 & 顧客タグ付け',
+    descriptionEn: 'Real-time order sync with automatic customer segmentation — no expensive CRM needed.',
+    descriptionJa: '受注をリアルタイム同期し、顧客を自動セグメンテーション。高額CRM不要。',
+    techStack: ['n8n', 'Shopify API', 'Google Sheets', 'Airtable'],
+    heroImage: '/images/workflows/wf-09-shopify-sync.png',
+    sections: {
+      problem: {
+        en: 'Customer data is trapped in Shopify admin with limited segmentation. You can\'t easily identify who\'s a first-time buyer vs. loyal repeat customer vs. someone about to churn — making targeted marketing impossible without expensive CRM tools.',
+        ja: '顧客データがShopify管理画面に閉じ込められ、セグメンテーションが限定的。初回購入者、ロイヤルリピーター、離脱リスク顧客の区別が簡単にできず、高額なCRMツールなしではターゲットマーケティングが不可能。',
+      },
+      solution: {
+        en: 'Every Shopify order triggers a real-time sync to Google Sheets. The workflow automatically tags customers based on purchase behavior: first-time, repeat, high-value, and at-risk (no purchase in 60+ days). This creates a live CRM without CRM subscription costs.',
+        ja: 'Shopifyの受注ごとにGoogleスプレッドシートへリアルタイム同期。購買行動に基づいて顧客を自動タグ付け：初回購入、リピート、高単価、離脱リスク（60日以上未購入）。CRMサブスクリプション費用なしでライブCRMを実現。',
+      },
+      howItWorks: {
+        en: [
+          'Trigger: Shopify webhook fires on every new order',
+          'Sync: Order details (items, amount, customer info) written to Google Sheets',
+          'Analyze: Customer purchase history is evaluated for segmentation',
+          'Tag: Automatic labels applied: first-time, repeat, high-value, at-risk',
+          'Action: Optional trigger for segment-specific follow-up workflows',
+        ],
+        ja: [
+          'トリガー：新規受注ごとにShopify Webhookが発火',
+          '同期：注文詳細（商品、金額、顧客情報）をGoogleスプレッドシートに記入',
+          '分析：セグメンテーションのため顧客の購買履歴を評価',
+          'タグ付け：自動ラベル適用：初回購入、リピート、高単価、離脱リスク',
+          'アクション：オプションでセグメント別フォローアップワークフローをトリガー',
+        ],
+      },
+      results: {
+        en: 'Complete customer visibility without CRM costs. Customer repeat purchase rate improved through targeted follow-up enabled by segmentation.',
+        ja: 'CRMコストなしで顧客の完全な可視化を実現。セグメンテーションによるターゲットフォローアップでリピート購入率が向上。',
+      },
+    },
+  },
+  {
+    slug: 'ai-calendar-concierge',
+    category: 'workflow',
+    solutionCategory: 'C',
+    titleEn: 'AI Calendar Concierge & Smart Notifications',
+    titleJa: 'AI カレンダーコンシェルジュ & スマート通知',
+    descriptionEn: 'Personalized appointment reminders and preparation notes sent automatically.',
+    descriptionJa: '予約前にパーソナライズされたリマインドと準備事項をAIが自動送信。',
+    techStack: ['n8n', 'Google Calendar', 'OpenAI', 'LINE Official Account', 'Gmail'],
+    heroImage: '/images/workflows/wf-10-calendar-concierge.png',
+    sections: {
+      problem: {
+        en: 'Appointment no-shows waste valuable time. Generic "You have an appointment tomorrow" reminders don\'t motivate clients to prepare. Manually sending personalized preparation notes before each meeting is unsustainable.',
+        ja: '予約の無断キャンセルは貴重な時間を無駄にする。「明日予約があります」という一般的なリマインドでは準備を促せない。各面談前にパーソナライズされた準備メモを手動で送るのは持続不可能。',
+      },
+      solution: {
+        en: 'AI generates contextual preparation notes for upcoming appointments — e.g., "Please bring your tax documents for tomorrow\'s consultation" for a tax client, or "Your skincare routine check-in is tomorrow" for a wellness client. Sent via LINE or email at the right timing.',
+        ja: 'AIが予約に応じた文脈的な準備メモを生成。例：税理士の顧客には「明日のご相談に向けて確定申告書類をご持参ください」、ウェルネスの顧客には「明日はスキンケアルーティンのチェックイン日です」。最適なタイミングでLINEまたはメールで送信。',
+      },
+      howItWorks: {
+        en: [
+          'Scan: Check Google Calendar for upcoming appointments (24h and 2h before)',
+          'Context: Pull client history and appointment type from CRM sheet',
+          'Generate: AI creates personalized reminder with preparation instructions',
+          'Send: Deliver via LINE or email based on client preference',
+          'Track: Log delivery status and reduce no-show rates over time',
+        ],
+        ja: [
+          'スキャン：Googleカレンダーの予約を確認（24時間前と2時間前）',
+          '文脈取得：CRMシートから顧客履歴と予約タイプを取得',
+          '生成：AIが準備事項付きのパーソナライズされたリマインドを作成',
+          '送信：顧客の好みに応じてLINEまたはメールで配信',
+          '追跡：配信状況をログし、ノーショー率を継続的に改善',
+        ],
+      },
+      results: {
+        en: 'No-show rate reduced by 60%. Client satisfaction improved through personalized, thoughtful communication. Zero manual effort per appointment.',
+        ja: 'ノーショー率を60%削減。パーソナライズされた丁寧なコミュニケーションで顧客満足度が向上。予約あたりの手作業ゼロ。',
+      },
+    },
+  },
+  {
+    slug: 'daily-business-summary',
+    category: 'workflow',
+    solutionCategory: 'C',
+    titleEn: 'AI Daily Business Summary',
+    titleJa: 'AI デイリービジネスサマリー自動配信',
+    descriptionEn: 'Morning briefing aggregating orders, inquiries, traffic, and social engagement.',
+    descriptionJa: '毎朝、受注・問い合わせ・トラフィック・SNSを集約してAIがブリーフィングを生成。',
+    techStack: ['n8n', 'OpenAI', 'Google Sheets', 'Google Analytics', 'Slack'],
+    heroImage: '/images/workflows/wf-11-daily-summary.png',
+    sections: {
+      problem: {
+        en: 'Starting the day means checking Shopify, Gmail, Google Analytics, social media notifications, and spreadsheets separately. By the time you\'ve assembled a picture of yesterday\'s business, an hour has passed and you still don\'t have clear priorities.',
+        ja: '朝はShopify、Gmail、Googleアナリティクス、SNS通知、スプレッドシートを別々にチェック。昨日のビジネス状況を把握する頃には1時間が過ぎ、それでも優先順位が明確でない。',
+      },
+      solution: {
+        en: 'The workflow aggregates data from all business sources overnight and uses AI to generate a concise morning briefing: key metrics, notable events, and suggested priorities for the day. Delivered to LINE or Slack at your preferred time.',
+        ja: '夜間にすべてのビジネスソースからデータを集約し、AIが簡潔なモーニングブリーフィングを生成：主要指標、注目イベント、その日の推奨優先事項。好みの時間にLINEまたはSlackに配信。',
+      },
+      howItWorks: {
+        en: [
+          'Aggregate: Pull data from Shopify, Gmail, Analytics, social platforms, and CRM sheets',
+          'Analyze: AI identifies trends, anomalies, and urgent items',
+          'Prioritize: Generate suggested action items ranked by impact',
+          'Format: Create a scannable morning briefing with key numbers',
+          'Deliver: Send to Slack or LINE at scheduled time (e.g., 7:00 AM)',
+        ],
+        ja: [
+          '集約：Shopify、Gmail、アナリティクス、SNS、CRMシートからデータを取得',
+          '分析：AIがトレンド、異常値、緊急項目を特定',
+          '優先順位：インパクト順にアクション項目を提案',
+          'フォーマット：主要数値を含むスキャンしやすいモーニングブリーフィングを作成',
+          '配信：スケジュールされた時間（例：朝7時）にSlackまたはLINEに送信',
+        ],
+      },
+      results: {
+        en: 'Morning startup time reduced from 60 minutes to 5 minutes. Clear daily priorities from day one. No more missed urgent items buried in multiple dashboards.',
+        ja: '朝のスタートアップ時間を60分から5分に短縮。初日から明確な日次優先事項。複数ダッシュボードに埋もれた緊急項目の見逃しがゼロに。',
+      },
+    },
+  },
+  {
+    slug: 'business-automation-analyzer',
+    category: 'workflow',
+    solutionCategory: 'C',
+    titleEn: 'Business Automation Opportunity Analyzer',
+    titleJa: 'ビジネス自動化ポイント AI 診断',
+    descriptionEn: 'Four AI agents analyze your business processes and propose an automation roadmap.',
+    descriptionJa: '4つのAIエージェントがビジネスプロセスを分析し、自動化ロードマップを提案。',
+    techStack: ['n8n', 'OpenAI', 'Google Forms', 'Google Sheets'],
+    heroImage: '/images/workflows/wf-12-automation-analyzer.png',
+    sections: {
+      problem: {
+        en: 'Business owners know they should automate but don\'t know where to start. Which processes have the highest ROI for automation? Without a structured analysis, they either automate the wrong things first or stay paralyzed by choice.',
+        ja: '事業主は自動化の必要性を感じているが、どこから始めるべかわからない。どのプロセスが最も高いROIをもたらすか？体系的な分析がなければ、間違った順序で自動化するか、選択肢に圧倒されて動けなくなる。',
+      },
+      solution: {
+        en: 'A diagnostic questionnaire feeds into four specialized AI agents that analyze different aspects: time waste identification, error-prone task detection, scalability bottleneck analysis, and cost reduction opportunities. The output is a prioritized automation roadmap.',
+        ja: '診断アンケートの回答を4つの専門AIエージェントが分析：時間の無駄の特定、エラーが起きやすいタスクの検出、スケーラビリティのボトルネック分析、コスト削減機会の発見。優先順位付きの自動化ロードマップを出力。',
+      },
+      howItWorks: {
+        en: [
+          'Input: Client fills out a structured questionnaire about their business processes',
+          'Agent 1: Analyzes time-intensive tasks and estimates automation savings',
+          'Agent 2: Identifies error-prone manual processes and quality risks',
+          'Agent 3: Evaluates scalability bottlenecks that limit growth',
+          'Agent 4: Calculates cost reduction opportunities with ROI projections',
+          'Output: Consolidated automation roadmap with 90-day implementation plan',
+        ],
+        ja: [
+          '入力：クライアントがビジネスプロセスに関する構造化アンケートに回答',
+          'エージェント1：時間集約型タスクを分析し、自動化による節約を試算',
+          'エージェント2：エラーが起きやすい手動プロセスと品質リスクを特定',
+          'エージェント3：成長を制限するスケーラビリティのボトルネックを評価',
+          'エージェント4：ROI予測付きでコスト削減機会を算出',
+          '出力：90日間の実装計画付き統合自動化ロードマップ',
+        ],
+      },
+      results: {
+        en: 'Provides a clear starting point for automation investment. Can be used as a lead magnet — the diagnostic itself generates qualified prospects who are ready to buy.',
+        ja: '自動化投資の明確な出発点を提供。リードマグネットとしても活用可能 — 診断自体が購買準備の整った見込み客を生成。',
+      },
+    },
+  },
+];
