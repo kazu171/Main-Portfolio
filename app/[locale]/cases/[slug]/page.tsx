@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import { getArticleBySlug, getAllArticles, isWorkflow, isCaseStudy, workflows } from '@/lib/content';
 import type { WorkflowArticle, CaseStudyArticle } from '@/lib/content';
+import { LastUpdated } from '@/components/ui/last-updated';
 
 const translations = {
   en: {
@@ -101,6 +102,16 @@ function WorkflowDetail({ article, locale, t }: { article: WorkflowArticle; loca
       <h1 className="text-4xl md:text-6xl font-[900] text-foreground tracking-tighter leading-[0.95] text-center">
         {locale === 'en' ? article.titleEn : article.titleJa}
       </h1>
+
+      {/* Direct Answer - AI extraction optimized */}
+      <p className="text-lg md:text-xl text-foreground/90 font-medium leading-relaxed max-w-3xl mx-auto text-center">
+        {locale === 'en' ? article.directAnswerEn : article.directAnswerJa}
+      </p>
+
+      {/* Last Updated - Freshness signal */}
+      <div className="flex justify-center">
+        <LastUpdated date={article.dateModified} locale={locale} />
+      </div>
 
       {/* Tech Stack */}
       <div className="flex flex-wrap gap-2 justify-center">
