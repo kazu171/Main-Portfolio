@@ -47,11 +47,11 @@ Plans:
   2. Person schema on About page with expertise, credentials, and sameAs links
   3. JSON-LD is bilingual-aware (correct language attributes per locale)
   4. Rich Results Test validates Organization and Person schemas
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 02-01: Organization schema implementation
-- [ ] 02-02: Person schema implementation
+- [ ] 02-01-PLAN.md — Organization schema with site-wide injection in layout and bilingual content
+- [ ] 02-02-PLAN.md — Person schema on About page with E-E-A-T expertise data
 
 ### Phase 3: Content Structure
 **Goal**: Content follows AI-extractable patterns for direct answers
@@ -182,7 +182,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Technical Foundation | 1/1 | ✓ Complete | 2026-02-12 |
-| 2. Entity Foundation | 0/2 | Not started | - |
+| 2. Entity Foundation | 0/2 | Planned | - |
 | 3. Content Structure | 0/3 | Not started | - |
 | 4. Article Schema | 0/1 | Not started | - |
 | 5. E-E-AT Signals | 0/2 | Not started | - |
