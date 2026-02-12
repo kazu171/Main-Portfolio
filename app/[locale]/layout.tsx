@@ -5,6 +5,8 @@ import {getMessages, setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {locales} from '@/i18n';
 import { Navbar } from '@/components/ui/navbar';
+import { generateOrganizationSchema } from '@/lib/schema/organization';
+import { JsonLd } from '@/components/json-ld';
 import '../globals.css';
 
 const nunito = Nunito({
@@ -70,10 +72,12 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   const messages = await getMessages();
+  const organizationSchema = generateOrganizationSchema(locale as 'en' | 'ja');
 
   return (
     <html lang={locale} className={`${nunito.variable} ${zenMaruGothic.variable}`}>
       <body>
+        <JsonLd data={organizationSchema} />
         <NextIntlClientProvider messages={messages}>
           <Navbar locale={locale as 'en' | 'ja'} />
           {children}
