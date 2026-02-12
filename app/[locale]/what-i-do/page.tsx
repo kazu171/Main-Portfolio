@@ -11,7 +11,7 @@ import { ArrowRight, MessageSquare, FileSpreadsheet, Users, Sparkles, Zap, Arrow
 const translations = {
   en: {
     title: 'Marketing Ops & Automation',
-    intro: 'Before adding new tactics, replace the "winning patterns currently running manually" with systems. I place a "24-hour working, highly capable practical staff member" in your business.',
+    intro: "I automate your winning business patterns with n8n and AI. My systems handle inquiries, invoicing, content creation, and customer follow-ups — reducing manual work by 60+ hours monthly while keeping you in control of strategy.",
     solutionsTitle: 'Three Solutions',
     solutions: {
       frontOffice: {
@@ -52,7 +52,7 @@ const translations = {
   },
   ja: {
     title: 'マーケティングオペレーション & 自動化',
-    intro: '新しい施策を追加する前に、「手動で回している勝ちパターン」をシステムに置き換える。あなたのビジネスに「24時間働く、高性能な実務スタッフ」を配置します。',
+    intro: "n8nとAIであなたの勝ちパターンを自動化。問い合わせ対応、請求書発行、コンテンツ制作、顧客フォローアップをシステム化し、月60時間以上の手作業を削減。戦略はあなたがコントロール。",
     solutionsTitle: '3つのソリューション',
     solutions: {
       frontOffice: {

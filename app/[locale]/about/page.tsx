@@ -14,7 +14,7 @@ const translations = {
     tagline: '"The person who breaks through one-person limits with systems."',
     introTitle: "Hi, I'm Kazu.",
     introBody: [
-      'I work with solopreneurs and small business owners to support their "existing winning formulas" with AI and automation, without breaking them.',
+      "I'm a marketing operations specialist who builds automation systems for solo business owners. I transform manual winning patterns into AI-powered workflows using n8n, helping clients save 60+ hours monthly and focus on growth strategy.",
       'Through designing and operating marketing strategies, and building the backend workflows (n8n / Google Tools / LLM), I settled into the position of an "Engineer who understands the field."',
       'Rather than launching temporary "attraction campaigns," I love the process of turning winning patterns into "reproducible systems."',
       'I excel at implementing "asset-based flows"—systems that keep working even while you rest.',
@@ -56,7 +56,7 @@ const translations = {
     tagline: '「一人ビジネスの限界を、仕組みで突破する人。」',
     introTitle: 'こんにちは、カズです。',
     introBody: [
-      '個人事業主やスモールビジネスオーナーと協力し、「すでにうまくいっている勝ちパターン」をAIと自動化でサポートします。壊すことなく。',
+      "一人法人向け自動化システムを構築するマーケティングオペレーション専門家。手動の勝ちパターンをn8nとAIワークフローに変換し、クライアントが月60時間以上を節約して成長戦略に集中できるよう支援。",
       'マーケティング戦略の設計・運用、バックエンドワークフロー（n8n / Googleツール / LLM）の構築を通じて、「現場がわかるエンジニア」というポジションに落ち着きました。',
       '一時的な「集客キャンペーン」を打つよりも、勝ちパターンを「再現可能なシステム」に変えるプロセスが好きです。',
       '「アセット型のフロー」の実装が得意です—あなたが休んでいる間も動き続けるシステム。',
