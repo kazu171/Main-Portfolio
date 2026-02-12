@@ -12,6 +12,10 @@ export const workflows: WorkflowArticle[] = [
     descriptionJa: '1つのトピックからTwitter・Instagram・LinkedIn向けに最適化された投稿を自動生成。',
     techStack: ['n8n', 'OpenAI', 'Twitter API', 'Instagram API', 'LinkedIn API'],
     heroImage: '/images/workflows/wf-01-sns-content.png',
+    directAnswerEn: "This workflow generates platform-optimized social media posts from a single topic. It creates Twitter threads, Instagram captions, and LinkedIn articles automatically, reducing daily content creation from 2 hours to 15 minutes.",
+    directAnswerJa: "1つのトピックから各プラットフォーム最適化されたSNS投稿を自動生成。Twitterスレッド、Instagramキャプション、LinkedIn記事を作成し、毎日のコンテンツ制作を2時間から15分に短縮。",
+    datePublished: "2026-01-15",
+    dateModified: "2026-02-12",
     sections: {
       problem: {
         en: 'Posting to multiple social media platforms daily consumes 2+ hours. Each platform demands different formats, character limits, hashtag strategies, and tone — copying and pasting the same message everywhere looks lazy and performs poorly.',
@@ -53,6 +57,10 @@ export const workflows: WorkflowArticle[] = [
     descriptionJa: 'キーワード機会を検知し、SEOブログ記事ドラフトを自動生成してWordPressに公開。',
     techStack: ['n8n', 'OpenAI', 'WordPress REST API', 'Google Search Console'],
     heroImage: '/images/workflows/wf-02-seo-blog.png',
+    directAnswerEn: "This workflow auto-generates SEO blog drafts from Search Console keyword opportunities and publishes them to WordPress. It increased blog output from 0 to 4 articles monthly with 180% organic traffic growth.",
+    directAnswerJa: "Search Consoleのキーワード機会からSEOブログ記事を自動生成しWordPressに公開。ブログ出力を月0本から4本に増やし、オーガニック流入180%成長を実現。",
+    datePublished: "2026-01-15",
+    dateModified: "2026-02-12",
     sections: {
       problem: {
         en: 'Blog content is critical for organic search traffic, but writing SEO-optimized articles takes 4-6 hours each. Most solo business owners abandon their blog within months, losing a key acquisition channel.',
@@ -94,6 +102,10 @@ export const workflows: WorkflowArticle[] = [
     descriptionJa: 'エリア×業種でGoogle Mapsからビジネスリードを自動収集。',
     techStack: ['n8n', 'Google Maps API', 'Google Sheets', 'Gmail'],
     heroImage: '/images/workflows/wf-03-lead-scraper.png',
+    directAnswerEn: "This workflow collects business leads by area and industry from Google Maps automatically. It extracts contact details, deduplicates against existing lists, and generates 100-500 qualified leads monthly at near-zero cost.",
+    directAnswerJa: "Google Mapsからエリア×業種でビジネスリードを自動収集。連絡先を抽出し既存リストと重複排除、ほぼゼロコストで月100〜500件の見込みリードを生成。",
+    datePublished: "2026-01-15",
+    dateModified: "2026-02-12",
     sections: {
       problem: {
         en: 'Finding new business prospects requires hours of manual searching, copying contact details from Google Maps one by one, and maintaining scattered lists. Without a systematic approach, outreach is inconsistent and opportunities are missed.',
@@ -135,6 +147,10 @@ export const workflows: WorkflowArticle[] = [
     descriptionJa: 'LINE・メール・フォームからの問い合わせにAIが一次対応・ヒアリング・予約調整。',
     techStack: ['n8n', 'OpenAI', 'LINE Official Account', 'Gmail', 'Google Calendar'],
     heroImage: '/images/workflows/wf-04-inquiry-concierge.png',
+    directAnswerEn: "This workflow handles inquiry responses across LINE, email, and web forms using AI. It classifies intent, generates contextual responses, conducts initial hearings, and auto-schedules consultations, reducing response time from 24 hours to 5 minutes.",
+    directAnswerJa: "LINE・メール・フォームからの問い合わせにAIが対応。意図を分類し文脈に応じた回答を生成、初期ヒアリングと予約調整を実行。応答時間を24時間から5分に短縮。",
+    datePublished: "2026-01-15",
+    dateModified: "2026-02-12",
     sections: {
       problem: {
         en: 'Inquiries arrive via LINE, email, and website forms throughout the day. Responding within minutes is critical for conversion, but solo operators cannot monitor all channels 24/7. Delayed responses mean lost leads.',
@@ -178,6 +194,10 @@ export const workflows: WorkflowArticle[] = [
     descriptionJa: '未回収請求書にAIが段階的リマインドメールを作成し自動送信。',
     techStack: ['n8n', 'OpenAI', 'Google Sheets', 'Gmail', 'Slack'],
     heroImage: '/images/workflows/wf-05-invoice-collection.png',
+    directAnswerEn: "This workflow automates overdue invoice follow-ups with AI-drafted escalating reminders. It monitors outstanding invoices and sends graduated messages over 30 days, improving collection rate from 78% to 95% without awkward conversations.",
+    directAnswerJa: "未回収請求書のフォローアップをAI作成の段階的リマインドで自動化。30日間で丁寧→堅め→正式とエスカレーション、回収率を78%から95%に改善。",
+    datePublished: "2026-01-15",
+    dateModified: "2026-02-12",
     sections: {
       problem: {
         en: 'Chasing overdue invoices is awkward and time-consuming. Many solo operators avoid sending reminders out of discomfort, resulting in chronic cash flow problems and tens of thousands of yen left on the table every month.',
@@ -219,6 +239,10 @@ export const workflows: WorkflowArticle[] = [
     descriptionJa: 'PDFをAI Visionで解析し、取引先・金額・明細を自動で帳簿に記帳。',
     techStack: ['n8n', 'OpenAI Vision', 'Google Sheets', 'Google Drive'],
     heroImage: '/images/workflows/wf-06-invoice-processor.png',
+    directAnswerEn: "This workflow extracts data from PDF invoices using AI Vision and auto-populates your bookkeeping sheet. It parses vendor, amount, date, and line items, reducing processing time from 5-10 minutes to under 30 seconds per document.",
+    directAnswerJa: "AI VisionでPDF請求書からデータを抽出し帳簿に自動記帳。取引先・金額・日付・明細を解析し、処理時間を1枚5〜10分から30秒以内に短縮。",
+    datePublished: "2026-01-15",
+    dateModified: "2026-02-12",
     sections: {
       problem: {
         en: 'Manually entering invoice data from PDFs into spreadsheets is tedious and error-prone. Each invoice takes 5-10 minutes to process, and data entry mistakes cause accounting headaches at tax time.',
@@ -260,6 +284,10 @@ export const workflows: WorkflowArticle[] = [
     descriptionJa: 'カレンダーとタスクデータから月次業務報告書をAIが自動生成。',
     techStack: ['n8n', 'OpenAI', 'Google Calendar', 'Google Sheets', 'Google Docs'],
     heroImage: '/images/workflows/wf-07-timesheet.png',
+    directAnswerEn: "This workflow auto-generates monthly work reports from calendar and task data using AI. It pulls events, aggregates by client/project, and creates formatted timesheets, reducing report creation from 8 hours to 30 minutes.",
+    directAnswerJa: "カレンダーとタスクデータからAIが月次業務報告書を自動生成。イベントを取得しクライアント・プロジェクト別に集計、報告書作成を8時間から30分に短縮。",
+    datePublished: "2026-01-15",
+    dateModified: "2026-02-12",
     sections: {
       problem: {
         en: 'Creating monthly work reports for clients or compliance is a dreaded end-of-month task. Reconstructing what you did from memory or scattered notes takes hours and the results are often incomplete.',
@@ -301,6 +329,10 @@ export const workflows: WorkflowArticle[] = [
     descriptionJa: '競合のWeb・SNS・価格を定期監視し、AIが変化を要約して週次レポートを配信。',
     techStack: ['n8n', 'OpenAI', 'HTTP Request', 'Google Sheets', 'Slack'],
     heroImage: '/images/workflows/wf-08-competitor-intel.png',
+    directAnswerEn: "This workflow monitors competitor websites, social media, and pricing automatically. It detects changes, generates AI-summarized weekly briefings, and logs all intelligence to a structured spreadsheet for strategic decision-making.",
+    directAnswerJa: "競合のWebサイト・SNS・価格を自動監視。変更を検出しAIが週次ブリーフィングを生成、構造化されたスプレッドシートに戦略情報をログ。",
+    datePublished: "2026-01-15",
+    dateModified: "2026-02-12",
     sections: {
       problem: {
         en: 'Staying aware of competitor moves is important but falls off the priority list when you\'re busy with client work. Competitors launch new services, change pricing, or publish content — and you only find out from clients.',
@@ -344,6 +376,10 @@ export const workflows: WorkflowArticle[] = [
     descriptionJa: '受注をリアルタイム同期し、顧客を自動セグメンテーション。高額CRM不要。',
     techStack: ['n8n', 'Shopify API', 'Google Sheets', 'Airtable'],
     heroImage: '/images/workflows/wf-09-shopify-sync.png',
+    directAnswerEn: "This workflow syncs Shopify orders to Google Sheets in real-time and auto-tags customers by behavior. It segments first-time, repeat, high-value, and at-risk customers without expensive CRM tools, improving repeat purchase rates.",
+    directAnswerJa: "Shopify受注をGoogleスプレッドシートにリアルタイム同期し購買行動で顧客を自動タグ付け。高額CRMなしで初回・リピート・高単価・離脱リスクをセグメント。",
+    datePublished: "2026-01-15",
+    dateModified: "2026-02-12",
     sections: {
       problem: {
         en: 'Customer data is trapped in Shopify admin with limited segmentation. You can\'t easily identify who\'s a first-time buyer vs. loyal repeat customer vs. someone about to churn — making targeted marketing impossible without expensive CRM tools.',
@@ -385,6 +421,10 @@ export const workflows: WorkflowArticle[] = [
     descriptionJa: '予約前にパーソナライズされたリマインドと準備事項をAIが自動送信。',
     techStack: ['n8n', 'Google Calendar', 'OpenAI', 'LINE Official Account', 'Gmail'],
     heroImage: '/images/workflows/wf-10-calendar-concierge.png',
+    directAnswerEn: "This workflow sends personalized appointment reminders and preparation notes automatically. AI generates contextual messages based on appointment type and client history, reducing no-show rates by 60% with zero manual effort.",
+    directAnswerJa: "予約リマインドと準備事項をパーソナライズして自動送信。AIが予約タイプと顧客履歴から文脈的なメッセージを生成、ノーショー率を60%削減。",
+    datePublished: "2026-01-15",
+    dateModified: "2026-02-12",
     sections: {
       problem: {
         en: 'Appointment no-shows waste valuable time. Generic "You have an appointment tomorrow" reminders don\'t motivate clients to prepare. Manually sending personalized preparation notes before each meeting is unsustainable.',
@@ -426,6 +466,10 @@ export const workflows: WorkflowArticle[] = [
     descriptionJa: '毎朝、受注・問い合わせ・トラフィック・SNSを集約してAIがブリーフィングを生成。',
     techStack: ['n8n', 'OpenAI', 'Google Sheets', 'Google Analytics', 'Slack'],
     heroImage: '/images/workflows/wf-11-daily-summary.png',
+    directAnswerEn: "This workflow aggregates data from all business sources and generates an AI-curated morning briefing. It summarizes orders, inquiries, traffic, and social engagement, reducing morning startup time from 60 minutes to 5 minutes.",
+    directAnswerJa: "全ビジネスソースからデータを集約しAIがモーニングブリーフィングを生成。受注・問い合わせ・トラフィック・SNSを要約し、朝のスタートアップを60分から5分に短縮。",
+    datePublished: "2026-01-15",
+    dateModified: "2026-02-12",
     sections: {
       problem: {
         en: 'Starting the day means checking Shopify, Gmail, Google Analytics, social media notifications, and spreadsheets separately. By the time you\'ve assembled a picture of yesterday\'s business, an hour has passed and you still don\'t have clear priorities.',
@@ -467,6 +511,10 @@ export const workflows: WorkflowArticle[] = [
     descriptionJa: '4つのAIエージェントがビジネスプロセスを分析し、自動化ロードマップを提案。',
     techStack: ['n8n', 'OpenAI', 'Google Forms', 'Google Sheets'],
     heroImage: '/images/workflows/wf-12-automation-analyzer.png',
+    directAnswerEn: "This workflow uses four AI agents to analyze your business processes and propose an automation roadmap. It identifies time waste, error-prone tasks, scalability bottlenecks, and cost reduction opportunities with ROI projections.",
+    directAnswerJa: "4つのAIエージェントがビジネスプロセスを分析し自動化ロードマップを提案。時間の無駄、エラーリスク、スケーラビリティ、コスト削減機会をROI予測付きで特定。",
+    datePublished: "2026-01-15",
+    dateModified: "2026-02-12",
     sections: {
       problem: {
         en: 'Business owners know they should automate but don\'t know where to start. Which processes have the highest ROI for automation? Without a structured analysis, they either automate the wrong things first or stay paralyzed by choice.',
