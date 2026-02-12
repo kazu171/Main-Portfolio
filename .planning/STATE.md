@@ -5,33 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-02-12)
 
 **Core value:** AI検索で引用される信頼ソースになり、週10件の問い合わせを獲得する
-**Current focus:** Phase 4 - Schema.org Implementation (next)
+**Current focus:** Phase 3 - Content Structure (next)
 
 ## Current Position
 
-Phase: 3 of 10 (Content Structure)
-Plan: 3 of 3 in current phase
+Phase: 2 of 10 (Entity Foundation)
+Plan: 2 of 2 in current phase
 Status: Phase complete
-Last activity: 2026-02-12 — Completed 03-03-PLAN.md
+Last activity: 2026-02-12 — Completed 02-02-PLAN.md
 
-Progress: [===-------] 30%
+Progress: [==--------] 20%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 4 min
-- Total execution time: 0.28 hours
+- Total plans completed: 3
+- Average duration: 6 min
+- Total execution time: 0.27 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-technical-foundation | 1 | 7 min | 7 min |
-| 03-content-structure | 3 | 8 min | 2.7 min |
+| 02-entity-foundation | 2 | 9 min | 4.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 7, 3, 3, 2 min
+- Last 5 plans: 7, 5, 4 min
 - Trend: Improving
 
 *Updated after each plan completion*
@@ -47,12 +47,12 @@ Recent decisions affecting current work:
 - [01-01]: robots.ts and sitemap.ts at app root for correct Next.js metadata route generation
 - [01-01]: English URL as canonical with hreflang alternates for both locales
 - [01-01]: All 9 AI search crawlers explicitly allowed
-- [03-01]: Use next-intl useFormatter for locale-aware date formatting
-- [03-01]: Semantic <time> element with dateTime attribute for machine-readability
-- [03-02]: Direct answers are 40-60 words answering "What does this workflow do?"
-- [03-02]: Direct answer displayed as first paragraph after title
-- [03-03]: Case study direct answers include specific metrics (time saved, revenue impact)
-- [03-03]: Static page intros answer implied questions directly under 50 words
+- [02-01]: Used schema-dts for TypeScript types (Google-maintained, complete vocabulary)
+- [02-01]: Organization schema at layout level for site-wide presence
+- [02-01]: Used @id references for entity graph connections (founder -> #person)
+- [02-02]: Split About page into Server (schema) + Client (interactivity) components
+- [02-02]: Person schema includes knowsAbout array for AI expertise recognition
+- [02-02]: worksFor references Organization via @id (bidirectional graph)
 
 ### Pending Todos
 
@@ -60,10 +60,11 @@ None yet.
 
 ### Blockers/Concerns
 
-None yet.
+- Pre-existing TypeScript errors in lib/content/*.ts (missing directAnswerEn/Ja, datePublished, dateModified) - blocks full tsc check
+- Google Fonts (Zen Maru Gothic) network timeout in Turbopack - affects local dev server
 
 ## Session Continuity
 
 Last session: 2026-02-12
-Stopped at: Phase 3 complete, ready for Phase 4
+Stopped at: Phase 2 complete, ready for Phase 3
 Resume file: None
