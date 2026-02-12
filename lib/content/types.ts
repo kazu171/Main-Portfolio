@@ -13,6 +13,12 @@ export interface WorkflowArticle {
   descriptionJa: string;
   techStack: string[];
   heroImage: string;
+  // Direct answer for AI extraction (40-60 words, standalone)
+  directAnswerEn: string;
+  directAnswerJa: string;
+  // Publication dates for freshness signals
+  datePublished: string;  // ISO 8601: "2026-01-15"
+  dateModified: string;   // ISO 8601: "2026-02-12"
   sections: {
     problem: { en: string; ja: string };
     solution: { en: string; ja: string };
@@ -30,6 +36,12 @@ export interface CaseStudyArticle {
   descriptionEn: string;
   descriptionJa: string;
   heroImage: string;
+  // Direct answer for AI extraction (40-60 words, standalone)
+  directAnswerEn: string;
+  directAnswerJa: string;
+  // Publication dates for freshness signals
+  datePublished: string;  // ISO 8601: "2026-01-15"
+  dateModified: string;   // ISO 8601: "2026-02-12"
   persona: {
     nameEn: string;
     nameJa: string;
