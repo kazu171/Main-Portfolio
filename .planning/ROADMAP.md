@@ -33,10 +33,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   1. robots.txt explicitly allows GPTBot, PerplexityBot, ClaudeBot, and GoogleBot
   2. sitemap.xml is generated with all pages and proper lastmod dates
   3. sitemap.xml includes hreflang alternates for en/ja bilingual pages
-**Plans**: TBD
+**Plans:** 1 plan
 
 Plans:
-- [ ] 01-01: robots.txt and sitemap implementation
+- [ ] 01-01-PLAN.md — robots.txt and sitemap.xml implementation with AI crawler allow rules and bilingual hreflang
 
 ### Phase 2: Entity Foundation
 **Goal**: Site has established entity identity for AI knowledge graphs
@@ -181,7 +181,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Technical Foundation | 0/1 | Not started | - |
+| 1. Technical Foundation | 0/1 | Planned | - |
 | 2. Entity Foundation | 0/2 | Not started | - |
 | 3. Content Structure | 0/3 | Not started | - |
 | 4. Article Schema | 0/1 | Not started | - |
