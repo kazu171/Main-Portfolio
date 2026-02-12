@@ -62,12 +62,12 @@ Plans:
   2. All pages follow H1 > H2 > H3 hierarchy without skipped levels
   3. No paragraph exceeds 4 lines (optimized for AI chunk extraction)
   4. Update dates visible on all articles (dateModified UI display)
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 03-01: Direct answer pattern implementation
-- [ ] 03-02: Heading hierarchy audit and fix
-- [ ] 03-03: Paragraph and date display optimization
+- [ ] 03-01-PLAN.md — Content type schema extension with date and direct answer fields, LastUpdated component
+- [ ] 03-02-PLAN.md — Workflow articles direct answer content and article page date display
+- [ ] 03-03-PLAN.md — Case study direct answers, dates, and static page intro optimization
 
 ### Phase 4: Article Schema
 **Goal**: All content articles have structured Article markup
@@ -183,7 +183,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10
 |-------|----------------|--------|-----------|
 | 1. Technical Foundation | 1/1 | ✓ Complete | 2026-02-12 |
 | 2. Entity Foundation | 0/2 | Planned | - |
-| 3. Content Structure | 0/3 | Not started | - |
+| 3. Content Structure | 0/3 | Planned | - |
 | 4. Article Schema | 0/1 | Not started | - |
 | 5. E-E-AT Signals | 0/2 | Not started | - |
 | 6. FAQ System | 0/3 | Not started | - |
