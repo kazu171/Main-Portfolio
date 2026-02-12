@@ -11,6 +11,10 @@ export const caseStudies: CaseStudyArticle[] = [
     descriptionEn: '60 hours/month saved. Invoice collection rate 78% → 95%. Capacity for 12 new clients.',
     descriptionJa: '月60時間削減。請求書回収率78%→95%。新規12社の顧問を受け入れ可能に。',
     heroImage: '/images/cases/case-01-tax-office.png',
+    directAnswerEn: "A solo tax accountant saved 60 hours monthly by automating inquiry responses, invoice collection, and report generation. AI handles 80% of client communications while collection rate improved from 78% to 95%, enabling 12 new clients without additional staff.",
+    directAnswerJa: "一人税理士が問い合わせ対応・請求書回収・報告書作成を自動化し月60時間を削減。AIが顧客対応の80%を処理、回収率78%→95%に改善。追加スタッフなしで新規12社を獲得。",
+    datePublished: "2026-01-20",
+    dateModified: "2026-02-12",
     persona: {
       nameEn: 'Yuki Tanaka',
       nameJa: '田中 優紀',
@@ -116,6 +120,10 @@ export const caseStudies: CaseStudyArticle[] = [
     descriptionEn: 'SNS time 2h/day → 15min. Repeat rate 22% → 38%. Organic traffic +180%.',
     descriptionJa: 'SNS作業2h/日→15分。リピート率22%→38%。オーガニック流入+180%。',
     heroImage: '/images/cases/case-02-wellness-shop.png',
+    directAnswerEn: "An organic e-commerce brand reduced SNS content creation from 2 hours daily to 15 minutes while growing organic traffic 180%. Automated customer segmentation improved repeat purchase rate from 22% to 38%, adding 2.4M yen annual revenue.",
+    directAnswerJa: "オーガニックECがSNS作業を1日2時間から15分に短縮、オーガニック流入180%成長。自動顧客セグメンテーションでリピート率22%→38%に改善、年間240万円の売上増。",
+    datePublished: "2026-01-20",
+    dateModified: "2026-02-12",
     persona: {
       nameEn: 'Mai Sato',
       nameJa: '佐藤 麻衣',
@@ -225,6 +233,10 @@ export const caseStudies: CaseStudyArticle[] = [
     descriptionEn: 'New leads: 0 → 8-12/month. Payment collection fully automated. +¥5M/year revenue.',
     descriptionJa: '新規リード：0→月8-12件。回収完全自動化。年商+500万。',
     heroImage: '/images/cases/case-03-consulting.png',
+    directAnswerEn: "A solo consultant grew new qualified leads from 0 to 8-12 monthly through automated prospecting. AI-powered invoice collection eliminated payment chasing discomfort while competitive intelligence briefings enabled proactive strategy, adding 5M yen annual revenue.",
+    directAnswerJa: "一人コンサルタントが自動化リード獲得で新規見込み客を月0件から8〜12件に。AI請求書回収で催促の心理的負担を解消、競合情報ブリーフィングで能動的戦略を実現し年間500万円の売上増。",
+    datePublished: "2026-01-20",
+    dateModified: "2026-02-12",
     persona: {
       nameEn: 'Kenji Yamamoto',
       nameJa: '山本 健二',
