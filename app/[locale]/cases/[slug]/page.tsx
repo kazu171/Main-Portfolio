@@ -212,6 +212,16 @@ function CaseStudyDetail({ article, locale, t }: { article: CaseStudyArticle; lo
         {locale === 'en' ? article.titleEn : article.titleJa}
       </h1>
 
+      {/* Direct Answer - AI extraction optimized */}
+      <p className="text-lg md:text-xl text-foreground/90 font-medium leading-relaxed max-w-3xl mx-auto text-center">
+        {locale === 'en' ? article.directAnswerEn : article.directAnswerJa}
+      </p>
+
+      {/* Last Updated - Freshness signal */}
+      <div className="flex justify-center">
+        <LastUpdated date={article.dateModified} locale={locale} />
+      </div>
+
       {/* Hero Image */}
       <div className="relative w-full aspect-video rounded-3xl overflow-hidden bg-white/40 border border-white/60">
         <Image
