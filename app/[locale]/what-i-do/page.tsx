@@ -1,4 +1,5 @@
-import { WhatIDoContent, faqContent } from '@/components/what-i-do-content';
+import { WhatIDoContent } from '@/components/what-i-do-content';
+import { faqContent } from '@/lib/content/faq';
 import { JsonLd } from '@/components/json-ld';
 import { generateFAQSchema } from '@/lib/schema/faq';
 import { BASE_URL } from '@/lib/schema/types';
