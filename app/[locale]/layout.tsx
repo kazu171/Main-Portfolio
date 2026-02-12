@@ -7,6 +7,7 @@ import {locales} from '@/i18n';
 import { Navbar } from '@/components/ui/navbar';
 import { generateOrganizationSchema } from '@/lib/schema/organization';
 import { JsonLd } from '@/components/json-ld';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import '../globals.css';
 
 const nunito = Nunito({
@@ -82,6 +83,7 @@ export default async function LocaleLayout({
           <Navbar locale={locale as 'en' | 'ja'} />
           {children}
         </NextIntlClientProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
