@@ -12,7 +12,7 @@ This roadmap transforms an existing Next.js portfolio (12 workflow articles + 3 
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Technical Foundation** - AI crawler access and sitemap infrastructure
+- [x] **Phase 1: Technical Foundation** - AI crawler access and sitemap infrastructure ✓
 - [ ] **Phase 2: Entity Foundation** - Organization and Person schemas for site-wide identity
 - [ ] **Phase 3: Content Structure** - Paragraph optimization and heading hierarchy
 - [ ] **Phase 4: Article Schema** - Article markup with publication dates
@@ -36,7 +36,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans:** 1 plan
 
 Plans:
-- [ ] 01-01-PLAN.md — robots.txt and sitemap.xml implementation with AI crawler allow rules and bilingual hreflang
+- [x] 01-01-PLAN.md — robots.txt and sitemap.xml implementation with AI crawler allow rules and bilingual hreflang ✓
 
 ### Phase 2: Entity Foundation
 **Goal**: Site has established entity identity for AI knowledge graphs
@@ -181,7 +181,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Technical Foundation | 0/1 | Planned | - |
+| 1. Technical Foundation | 1/1 | ✓ Complete | 2026-02-12 |
 | 2. Entity Foundation | 0/2 | Not started | - |
 | 3. Content Structure | 0/3 | Not started | - |
 | 4. Article Schema | 0/1 | Not started | - |
