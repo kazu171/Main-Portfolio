@@ -2,6 +2,14 @@ export type SolutionCategory = 'A' | 'B' | 'C';
 export type ArticleCategory = 'workflow' | 'case-study';
 export type Locale = 'en' | 'ja';
 
+// Citation for credibility (AEO/GEO optimization)
+export interface Citation {
+  source: string;      // "Zapier", "Harvard Business Review"
+  title: string;       // Article or study title
+  url?: string;        // Optional link
+  year: string;        // "2024"
+}
+
 export interface WorkflowArticle {
   slug: string;
   category: 'workflow';
@@ -25,6 +33,8 @@ export interface WorkflowArticle {
     howItWorks: { en: string[]; ja: string[] };
     results: { en: string; ja: string };
   };
+  // Citations for credibility (optional)
+  citations?: Citation[];
 }
 
 export interface CaseStudyArticle {

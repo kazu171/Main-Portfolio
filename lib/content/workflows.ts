@@ -1,4 +1,4 @@
-import { WorkflowArticle } from './types';
+import { WorkflowArticle, Citation } from './types';
 
 export const workflows: WorkflowArticle[] = [
   // ── Category A: Front-Office Automation ──────────────────────────
@@ -46,6 +46,25 @@ export const workflows: WorkflowArticle[] = [
         ja: 'SNSコンテンツ制作時間を1日2時間から15分に短縮。すべてのプラットフォームで投稿頻度を維持しつつ、燃え尽きを防止。',
       },
     },
+    citations: [
+      {
+        source: 'Sprout Social',
+        title: 'The 2024 Social Media Manager Report',
+        url: 'https://sproutsocial.com/insights/social-media-manager-report/',
+        year: '2024',
+      },
+      {
+        source: 'HubSpot',
+        title: 'The State of Marketing Report',
+        url: 'https://www.hubspot.com/state-of-marketing',
+        year: '2024',
+      },
+      {
+        source: 'Buffer',
+        title: 'State of Social Media Report: AI adoption rises 40% among marketers',
+        year: '2024',
+      },
+    ],
   },
   {
     slug: 'seo-wordpress-auto-publisher',
@@ -181,6 +200,24 @@ export const workflows: WorkflowArticle[] = [
         ja: '応答時間を24時間から5分以内に短縮。AIが初期問い合わせの80%を自律的に処理し、1日3時間以上を解放。',
       },
     },
+    citations: [
+      {
+        source: 'Harvard Business Review',
+        title: 'The Short Life of Online Sales Leads',
+        url: 'https://hbr.org/2011/03/the-short-life-of-online-sales-leads',
+        year: '2011',
+      },
+      {
+        source: 'Salesforce',
+        title: 'State of the Connected Customer Report',
+        year: '2024',
+      },
+      {
+        source: 'Drift',
+        title: 'The State of Conversational Marketing',
+        year: '2023',
+      },
+    ],
   },
 
   // ── Category B: Back-Office Automation ────────────────────────────
@@ -228,6 +265,24 @@ export const workflows: WorkflowArticle[] = [
         ja: '請求書回収率が支払い期限内で78%から95%に改善。手動での支払い催促の心理的負担を解消。',
       },
     },
+    citations: [
+      {
+        source: 'Atradius',
+        title: 'Payment Practices Barometer',
+        url: 'https://atradius.com/publications/',
+        year: '2024',
+      },
+      {
+        source: 'QuickBooks',
+        title: 'Late Payments Report: 64% of small businesses have unpaid invoices',
+        year: '2023',
+      },
+      {
+        source: 'Fundbox',
+        title: 'The Impact of Late Payments on Small Business',
+        year: '2024',
+      },
+    ],
   },
   {
     slug: 'invoice-pdf-processor',

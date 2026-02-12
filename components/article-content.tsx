@@ -21,6 +21,7 @@ import { isWorkflow, isCaseStudy, workflows } from '@/lib/content';
 import type { WorkflowArticle, CaseStudyArticle, Article } from '@/lib/content';
 import { LastUpdated } from '@/components/ui/last-updated';
 import { AuthorCard } from '@/components/ui/author-card';
+import { CitationsList } from '@/components/ui/citations-list';
 
 const translations = {
   en: {
@@ -190,6 +191,11 @@ function WorkflowDetail({ article, locale, t }: { article: WorkflowArticle; loca
         <p className="text-lg text-foreground font-medium leading-relaxed">
           {article.sections.results[locale]}
         </p>
+
+        {/* Citations - Credibility signal */}
+        {article.citations && article.citations.length > 0 && (
+          <CitationsList citations={article.citations} locale={locale} />
+        )}
       </MochiCard>
     </>
   );
