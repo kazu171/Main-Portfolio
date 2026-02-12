@@ -13,8 +13,8 @@ This roadmap transforms an existing Next.js portfolio (12 workflow articles + 3 
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Technical Foundation** - AI crawler access and sitemap infrastructure ✓
-- [ ] **Phase 2: Entity Foundation** - Organization and Person schemas for site-wide identity
-- [ ] **Phase 3: Content Structure** - Paragraph optimization and heading hierarchy
+- [x] **Phase 2: Entity Foundation** - Organization and Person schemas for site-wide identity ✓
+- [x] **Phase 3: Content Structure** - Paragraph optimization and heading hierarchy ✓
 - [ ] **Phase 4: Article Schema** - Article markup with publication dates
 - [ ] **Phase 5: E-E-AT Signals** - Author profiles and expertise display
 - [ ] **Phase 6: FAQ System** - FAQ content creation and FAQPage schema
@@ -50,8 +50,8 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Organization schema with site-wide injection in layout and bilingual content
-- [ ] 02-02-PLAN.md — Person schema on About page with E-E-A-T expertise data
+- [x] 02-01-PLAN.md — Organization schema with site-wide injection in layout and bilingual content ✓
+- [x] 02-02-PLAN.md — Person schema on About page with E-E-A-T expertise data ✓
 
 ### Phase 3: Content Structure
 **Goal**: Content follows AI-extractable patterns for direct answers
@@ -65,9 +65,9 @@ Plans:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Content type schema extension with date and direct answer fields, LastUpdated component
-- [ ] 03-02-PLAN.md — Workflow articles direct answer content and article page date display
-- [ ] 03-03-PLAN.md — Case study direct answers, dates, and static page intro optimization
+- [x] 03-01-PLAN.md — Content type schema extension with date and direct answer fields, LastUpdated component ✓
+- [x] 03-02-PLAN.md — Workflow articles direct answer content and article page date display ✓
+- [x] 03-03-PLAN.md — Case study direct answers, dates, and static page intro optimization ✓
 
 ### Phase 4: Article Schema
 **Goal**: All content articles have structured Article markup
@@ -182,8 +182,8 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Technical Foundation | 1/1 | ✓ Complete | 2026-02-12 |
-| 2. Entity Foundation | 0/2 | Planned | - |
-| 3. Content Structure | 0/3 | Planned | - |
+| 2. Entity Foundation | 2/2 | ✓ Complete | 2026-02-12 |
+| 3. Content Structure | 3/3 | ✓ Complete | 2026-02-12 |
 | 4. Article Schema | 0/1 | Not started | - |
 | 5. E-E-AT Signals | 0/2 | Not started | - |
 | 6. FAQ System | 0/3 | Not started | - |
