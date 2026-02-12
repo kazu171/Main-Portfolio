@@ -55,6 +55,7 @@ const personData: Record<Locale, PersonData> = {
 export function generatePersonSchema(locale: Locale): WithContext<Person> {
   const data = personData[locale]
 
+  // Type assertion needed: inLanguage is valid schema.org but not in schema-dts types
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -71,5 +72,5 @@ export function generatePersonSchema(locale: Locale): WithContext<Person> {
       '@id': ORGANIZATION_ID,
     },
     inLanguage: locale,
-  }
+  } as WithContext<Person>
 }

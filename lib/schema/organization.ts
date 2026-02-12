@@ -40,6 +40,7 @@ export function generateOrganizationSchema(
 ): WithContext<Organization> {
   const data = organizationData[locale]
 
+  // Type assertion needed: inLanguage is valid schema.org but not in schema-dts types
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -55,5 +56,5 @@ export function generateOrganizationSchema(
       '@id': PERSON_ID,
     },
     inLanguage: locale,
-  }
+  } as WithContext<Organization>
 }
