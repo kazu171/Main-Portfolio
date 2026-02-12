@@ -20,6 +20,7 @@ import {
 import { isWorkflow, isCaseStudy, workflows } from '@/lib/content';
 import type { WorkflowArticle, CaseStudyArticle, Article } from '@/lib/content';
 import { LastUpdated } from '@/components/ui/last-updated';
+import { AuthorCard } from '@/components/ui/author-card';
 
 const translations = {
   en: {
@@ -46,6 +47,7 @@ const translations = {
     ctaButton: 'Start the Conversation',
     notFound: 'Article not found',
     notFoundDesc: 'The article you are looking for does not exist.',
+    writtenBy: 'Written by',
   },
   ja: {
     back: '← 事例一覧に戻る',
@@ -71,6 +73,7 @@ const translations = {
     ctaButton: '相談を始める',
     notFound: '記事が見つかりません',
     notFoundDesc: 'お探しの記事は存在しません。',
+    writtenBy: '著者',
   },
 };
 
@@ -379,6 +382,14 @@ export function ArticleContent({ article, locale }: ArticleContentProps) {
           {isWorkflow(article) && <WorkflowDetail article={article} locale={locale} t={t} />}
           {isCaseStudy(article) && <CaseStudyDetail article={article} locale={locale} t={t} />}
         </article>
+
+        {/* Author Card - E-E-A-T signal */}
+        <section className="mt-12">
+          <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-4">
+            {t.writtenBy}
+          </h3>
+          <AuthorCard locale={locale} />
+        </section>
 
         {/* CTA Section */}
         <section className="mt-16 py-16 bg-white/30 backdrop-blur-xl rounded-[3rem] border border-white/60 shadow-inner text-center space-y-6 px-8">
